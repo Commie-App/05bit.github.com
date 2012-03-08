@@ -1,0 +1,47 @@
+/** (c) 2011 05BIT,
+    Alexey Kinyov
+    rudy@05bit.com
+*/
+body {
+    font-family: 'Georgia', serif;
+    }
+body, div, img, span {
+    border: none;
+    margin: 0;
+    padding: 0;
+    }
+a {
+    text-decoration: none;
+    }
+a:hover {
+    text-decoration: underline;
+    }
+#body-wrapper {
+    margin-top: 120px;
+    margin-left: 120px;
+    }
+#content header {
+    width: 600px;
+    }
+#content header .logo span {
+    font-family: 'Michroma', sans-serif;
+    font-size: 80pt;
+    }
+#content header .motto {
+    margin-left: 122px;
+    font-size: 24pt;
+    font-style: italic;
+    color: #999;
+    }
+#content article {
+    margin-top: 60px;
+    margin-left: 122px;
+    }
+footer {
+    margin-top: 120px;
+    color: #999;
+    }
+footer a {
+    color: #999;
+    text-decoration: none;
+    }
