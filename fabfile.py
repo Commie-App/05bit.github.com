@@ -1,7 +1,6 @@
 from fabric.api import *
 import os
 
-
 PROJECT_DIR = os.path.realpath(os.path.dirname(__file__))
         
 def build():

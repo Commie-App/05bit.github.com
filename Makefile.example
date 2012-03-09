@@ -1,0 +1,11 @@
+SHELL := /bin/bash
+
+# virtualenv path
+ENV := ../env/
+
+# path to 'fab' tool
+FABRIK := /usr/bin/fab
+
+all:
+    @echo ${PATH}
+    source ${ENV}bin/activate && ${FABRIK} build
