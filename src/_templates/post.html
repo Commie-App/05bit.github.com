@@ -10,9 +10,11 @@
 
 {% block content %}
 <div id="post-content" class="container container_12 clearfix">
-    <div class="grid_12">
+    <div class="grid_8">
         <h1>{{ post.title }}</h1>
-        {{ post.content }}
+        <div class="text">
+            {{ post.content }}
+        </div>
     </div>
 </div>
 {% endblock %}
