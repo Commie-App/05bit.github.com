@@ -4,8 +4,8 @@ import os
 PROJECT_DIR = os.path.realpath(os.path.dirname(__file__))
         
 def build():
-    local('mynt -f src build')
-    local('rsync -r build/ ./')
+    local('mynt -f src .build')
+    local('rsync -r .build/ ./')
 
 def deploy():
     pass

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}05BIT{% endblock %}</title>
+
+    <link rel="icon" type="image/png" href="{{ get_asset('favicon.png') }}" />
+    <link href='http://fonts.googleapis.com/css?family=Michroma' rel='stylesheet' type='text/css' />
+
+    <!--[if lt IE 9]>
+        <script src="{{ get_asset('js/html5.js') }}"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+        <link rel="icon" type="image/gif" href="{{ get_asset('favicon.gif') }}" />
+    <![endif]-->
+
+    <link href="{{ get_asset('css/grid.css') }}" rel='stylesheet' type='text/css' />
+    <link href="{{ get_asset('css/styles.css') }}" rel='stylesheet' type='text/css' />
+</head>
+
+<body>    
+    {% block header %}{% endblock %}
+
+    {% block content %}{% endblock %}
+
+    {% block footer %}
+    <footer class="container container_12 clearfix">
+        <div class="grid_12">
+            &copy; 2012 05BIT, <a href="mailto:contact@05bit.com">contact@05bit.com</a>
+        </div>
+    </footer>
+    {% endblock %}
+</body>
+
+</html>

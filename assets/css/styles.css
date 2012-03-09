@@ -36,7 +36,7 @@ ul.no-bullets, ul.no-bullets li {
     }
 #content header .logo span {
     font-family: 'Michroma', sans-serif;
-    font-size: 80pt;
+    font-size: 80px;
     }
 #content header .motto {
     margin-left: 122px;
@@ -48,6 +48,18 @@ ul.no-bullets, ul.no-bullets li {
     margin-top: 60px;
     margin-left: 122px;
     }
+#post-header {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+    #post-header a, #post-header a:hover {
+        text-decoration: none;
+    }
+    #post-header span {
+        font-family: 'Michroma', sans-serif;
+        font-size: 24px;
+        color: #000;
+        }
 footer {
     margin-top: 120px;
     color: #999;

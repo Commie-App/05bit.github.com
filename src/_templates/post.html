@@ -1,2 +1,18 @@
-<h1>{{ post.title }}</h1>
-{{ post.content }}
+{% extends "base.html" %}
+
+{% block header %}
+<header id="post-header" class="container container_12 clearfix">
+    <div id="" class="grid_12">
+        <a href="{{ get_url('') }}"><img src="{{ get_asset('img/logo.gif') }}" width="36px"> <span>05BIT</span></a>
+    </div>
+</header>
+{% endblock %}
+
+{% block content %}
+<div id="post-content" class="container container_12 clearfix">
+    <div class="grid_12">
+        <h1>{{ post.title }}</h1>
+        {{ post.content }}
+    </div>
+</div>
+{% endblock %}
