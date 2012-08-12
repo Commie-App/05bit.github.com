@@ -12,7 +12,7 @@
     <!--[if IE]>  
         <script src="/assets/js/html5.js"></script>
     <![endif]--> 
-
+    <script type="text/javascript" src="/assets/js/knockout-2.0.0.js"></script>
     <link href="/assets/css/styles.css" rel='stylesheet' type='text/css' />
 </head>
 
@@ -22,28 +22,81 @@
             <div class="logo">
                 <img src="/assets/img/logo.gif" alt=":)" />
                 <span>05BIT</span>
+                <a href="#" data-bind="click: selectRUS"><img src="/assets/img/flag_RU.png" class="lang"></a>
+                <a href="#" data-bind="click: selectENG"><img src="/assets/img/flag_US.png" class="lang"></a>
             </div>
         </header>
         
         <article>
-        <p>We create cutting edge web services and mobile applications.</p>
-        <p>Contact us: <a href="mailto:contact@05bit.com">contact@05bit.com</a></p>
+            <div data-bind="visible: lang() == 'en'">
+                <h2>We create web services making the world more open-hearted.</h2>
+                <p>Drop us a line: <a href="mailto:contact@05bit.com">contact@05bit.com</a></p>
+            </div>
+            
+            <div data-bind="visible: lang() == 'ru'">
+                <h2>Создаем веб-сервисы, делающие мир добрее и смелее.</h2>
+                <p>E-mail: <a href="mailto:contact@05bit.com">contact@05bit.com</a></p>
+            </div>
         </article>
 
         <article>
-            <h3>Featured Projects</h3>
+            <h2 data-bind="visible: lang() == 'en'">Featured Projects</h2>
+            <h2 data-bind="visible: lang() == 'ru'">Проекты</h2>
 
-            <ul class="no-bullets">
-                <li><a href="http://www.qmazi.com" target="_blank">Qmazi</a>, platform for blogging focused on blogs for teams [creation]</li>
-                <li><a href="http://www.ikucha.ru" target="_blank">iKoocha</a>, web-service for personal knowledge base [creation]</li>
-                <li><a href="http://itunes.apple.com/us/app/how-mouse-played-ball-book/id483558719" target="_blank">How the Mouse Played with the Ball</a>, iPad application for kids [programming]</li>
-            </ul>
+            <table class="projects">
+                <tr data-bind="visible: lang() == 'ru'">
+                    <td><a href="http://www.darimvmeste.ru" target="_blank">Дарим Вместе</a></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td><a href="http://www.gallerza.com" target="_blank">Gallerza</a></td>
+                    <td><a href="http://www.qmazi.com" target="_blank">Qmazi</a></td>
+                </tr>
+                <tr data-bind="visible: lang() == 'en'">
+                    <td><a href="http://www.ikucha.ru" target="_blank">iKucha</a></td>
+                    <td><a href="http://itunes.apple.com/us/app/how-mouse-played-ball-book/id483558719" target="_blank">How the Mouse Played <br> with the Ball</a></td>
+                </tr>
+                <tr data-bind="visible: lang() == 'ru'">
+                    <td><a href="http://www.ikucha.ru" target="_blank">iКуча</a></td>
+                    <td><a href="http://itunes.apple.com/ru/app/how-mouse-played-ball-book/id483558719" target="_blank">Как мышка <br> играла в мячик</a></td>
+                </tr>
+            </table>
+
         </article>
-
     </div>
     <footer>
         &copy; 2012 05BIT, <a href="mailto:contact@05bit.com">contact@05bit.com</a>
-    </footer>
-</body>
 
+        <div xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/" about="http://www.free-country-flags.com/flag_pack.php?id=1" style="font-size: smaller; margin-top: 25px;"><span property="dct:title">Free Country Flags</span> (<a rel="cc:attributionURL" property="cc:attributionName" href="http://www.free-country-flags.com/">Gang of the Coconuts</a>) / <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <img src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" style="vertical-align: middle;"></div>
+    </footer>
+
+    <script type="text/javascript">
+        var view = {
+            lang: ko.observable('en'),
+
+            updateLang: function(newlang) {
+                if (!newlang) {
+                    if (window.location.hash) {
+                        newlang = window.location.hash.substring(1);
+                    } else {
+                        newlang = view.lang();
+                    }
+                }
+
+                view.lang(newlang);
+                window.location.hash = '#' + newlang;
+            },
+
+            selectRUS: function() {
+                view.updateLang('ru');
+            },
+
+            selectENG: function() {
+                view.updateLang('en');
+            }
+        }
+        ko.applyBindings(view);
+        view.updateLang();
+    </script>
+</body>
 </html>

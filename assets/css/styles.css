@@ -19,7 +19,6 @@ a:hover {
     }
 h1, h2, h3 {
     color: #999;
-    font-style: italic;
     font-weight: normal;
     }
 ul.no-bullets, ul.no-bullets li {
@@ -28,7 +27,8 @@ ul.no-bullets, ul.no-bullets li {
     padding-left: 0;
 }
 #body-wrapper {
-    margin-top: 120px;
+    width: 840px;
+    margin-top: 60px;
     margin-left: 120px;
     }
 #content header {
@@ -37,6 +37,9 @@ ul.no-bullets, ul.no-bullets li {
 #content header .logo span {
     font-family: 'Michroma', sans-serif;
     font-size: 80px;
+    }
+    #content header .logo .lang {
+    box-shadow: 0px 0px 3px #ccc;
     }
 #content header .motto {
     margin-left: 122px;
@@ -48,6 +51,15 @@ ul.no-bullets, ul.no-bullets li {
     margin-top: 60px;
     margin-left: 122px;
     }
+#content table.projects {
+    width: 100%;
+}
+    #content table.projects td {
+        padding: 10px 0px 10px 0px;
+        width: 50%;
+        font-size: 20px;
+        }
+
 #post-header {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -61,11 +73,11 @@ ul.no-bullets, ul.no-bullets li {
         color: #000;
         }
 footer {
-    margin-top: 120px;
+    margin-top: 30px;
     margin-bottom: 15px;
     color: #999;
     }
 footer a {
-    color: #999;
+    color: #999 !important;
     text-decoration: none;
     }
