@@ -95,6 +95,16 @@
                 view.updateLang('en');
             }
         }
+
+        // set default language by browser setting
+        if (navigator.language) {
+            if (navigator.language.indexOf('ru') >= 0) {
+                view.lang('ru');
+            } else if (navigator.language.indexOf('en') >= 0) {
+                view.lang('en');
+            }
+        }
+
         ko.applyBindings(view);
         view.updateLang();
     </script>
