@@ -6,44 +6,170 @@
     <meta name="keywords" content="development, python, django, iOS, iPhone, iPad, web services, mobile applications, mobile apps development, awareness development">
     <meta name="description" content="Web and Mobile development. Python/Django, PHP, iOS, Android.">
     <title>05BIT</title>
-    <link rel="icon" type="image/gif" href="{{ get_asset('favicon.png') }}" />
+    <link rel="icon" type="image/gif" href="/assets/favicon.png" />
     <link href='http://fonts.googleapis.com/css?family=Michroma' rel='stylesheet' type='text/css' />
 
     <!--[if IE]>  
-        <script src="{{ get_asset('js/html5.js') }}"></script>
+        <script src="/assets/js/html5.js"></script>
     <![endif]--> 
-
-    <link href="{{ get_asset('css/styles.css') }}" rel='stylesheet' type='text/css' />
+    <script type="text/javascript" src="/assets/js/knockout-2.0.0.js"></script>
+    <link href="/assets/css/styles.css" rel='stylesheet' type='text/css' />
 </head>
 
 <body id="body-wrapper">
     <div id="content">
         <header id="page-header">
             <div class="logo">
-                <img src="{{ get_asset('img/logo.gif') }}" alt=":)" />
+                <img src="/assets/img/logo.gif" alt=":)" />
                 <span>05BIT</span>
+                <a href="#" data-bind="click: selectRUS"><img src="/assets/img/flag_RU.png" class="lang"></a>
+                <a href="#" data-bind="click: selectENG"><img src="/assets/img/flag_US.png" class="lang"></a>
             </div>
         </header>
         
-        <article>
-        <p>We create cutting edge web services and mobile applications.</p>
-        <p>Contact us: <a href="mailto:contact@05bit.com">contact@05bit.com</a></p>
-        </article>
+        <section>
+            <div data-bind="visible: lang() == 'en'">
+                <h2>Innovations as is</h2>
+                <p>Drop us a line: <a href="mailto:contact@05bit.com">contact@05bit.com</a></p>
+            </div>
+            
+            <div data-bind="visible: lang() == 'ru'">
+                <h2>Инновации и точка!</h2>
+                <p>E-mail: <a href="mailto:contact@05bit.com">contact@05bit.com</a></p>
+            </div>
+        </section>
 
-        <article>
-            <h3>Featured Projects</h3>
+        <section data-bind="visible: lang() == 'ru'">
+            <h2>Добро пожаловать</h2>
 
-            <ul class="no-bullets">
-                <li><a href="http://www.qmazi.com" target="_blank">Qmazi</a>, platform for blogging focused on blogs for teams [creation]</li>
-                <li><a href="http://www.ikucha.ru" target="_blank">iKoocha</a>, web-service for personal knowledge base [creation]</li>
-                <li><a href="http://itunes.apple.com/us/app/how-mouse-played-ball-book/id483558719" target="_blank">How the Mouse Played with the Ball</a>, iPad application for kids [programming]</li>
+            <p>Вы зашли к нам! Это прекрасно, здравствуйте!</p>
+
+            <p>Осматривайтесь, не стесняйтесь написать нам и задать вопросы.</p>
+        </section>
+
+        <section data-bind="visible: lang() == 'ru'">
+            <h2>Интро</h2>
+
+            <p>Мы разрабатываем веб-сервисы, в основе которых есть новая оригинальная идея.</p>
+
+            <p>Любим технологии и используем лучшие из них &mdash; те, с которыми приятно работать, которые эффективны, которые созданы передовыми инженерами мирового уровня:</p>
+
+            <ul>
+                <li><a href="http://python.org" target="_blank">Python</a> / <a href="http://djangoproject.com" target="_blank">Django</a> / <a href="http://flask.pocoo.org/" target="_blank">Flask</a></li>
+
+                <li>Javascript / <a href="http://jquery.com/" target="_blank">jQuery</a> / <a href="http://knockoutjs.com/" target="_blank">KnockoutJS</a> / <a href="http://twitter.github.com/bootstrap/" target="_blank">Bootstrap</a></li>
+                <li>"Облачные" сервисы <a href="http://aws.amazon.com/" target="_blank">Amazon</a> и <a href="http://cloud.google.com/" target="_blank">Google</a></li>
             </ul>
-        </article>
 
+            <p>Мы максимально используем возможности существующих сервисов, не изобретая велосипеды. Знаем кун-фу платежных систем и авторизации через социальные сети.</p>
+        </section>
+
+        <section>
+            <h2 data-bind="visible: lang() == 'en'">Featured Projects</h2>
+            <h2 data-bind="visible: lang() == 'ru'">Проекты</h2>
+
+            <table class="projects">
+                <!--tr data-bind="visible: lang() == 'ru'">
+                    <td><a href="http://www.darimvmeste.ru" target="_blank">Дарим Вместе</a></td>
+                    <td>&nbsp;</td>
+                </tr-->
+                <tr>
+                    <td><a href="http://www.gallerza.com" target="_blank">Gallerza</a></td>
+                    <td><a href="http://www.qmazi.com" target="_blank">Qmazi</a></td>
+                </tr>
+                <tr data-bind="visible: lang() == 'en'">
+                    <td><a href="http://www.ikucha.ru" target="_blank">iKucha</a></td>
+                    <td><a href="http://itunes.apple.com/us/app/how-mouse-played-ball-book/id483558719" target="_blank">How the Mouse Played <br> with the Ball</a></td>
+                </tr>
+                <tr data-bind="visible: lang() == 'ru'">
+                    <td><a href="http://www.ikucha.ru" target="_blank">iКуча</a></td>
+                    <td><a href="http://itunes.apple.com/ru/app/how-mouse-played-ball-book/id483558719" target="_blank">Как мышка <br> играла в мячик</a></td>
+                </tr>
+            </table>
+        </section>
+
+        <section data-bind="visible: lang() == 'ru'">
+            <table class="projects">
+                <tr>
+                    <td>
+                        <h3>Наши ресурсы</h2>
+                    </td>
+                    <td>
+                        <h3>Блоги</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://github.com/organizations/05bit" target="_blank">05Bit @ GutHub</a>
+                    </td>
+
+                    <td><a href="http://05bit.qmazi.com" target="_blank">05Bit @ Qmazi</a> </td>
+                </tr>
+                <tr>
+                    <td><a href="https://bitbucket.org/05bit" target="_blank">05Bit @ Bitbucket</a>
+                    </td>
+                    <td>
+                        <a href="http://uvavu.ru/" target="_blank">Uvavu.ru</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <a href="http://kiss-of-life.posterous.com/" target="_blank">Kiss Of Life</a>
+                    </td>
+                </tr>
+
+            </table>
+
+        </section>
+
+        <section data-bind="visible: lang() == 'ru'">
+            <h2>А что нужно вам?</h2>
+            <p>E-mail: <a href="mailto:contact@05bit.com">contact@05bit.com</a></p>
+        </section>
     </div>
     <footer>
-        &copy; 2012 05BIT, <a href="mailto:contact@05bit.com">contact@05bit.com</a>
-    </footer>
-</body>
+        &copy; 2012 <a href="http://05bit.com">05Bit</a></a>
 
+        <div xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/" about="http://www.free-country-flags.com/flag_pack.php?id=1" style="font-size: smaller; margin-top: 25px;"><span property="dct:title">Free Country Flags</span> (<a rel="cc:attributionURL" property="cc:attributionName" href="http://www.free-country-flags.com/">Gang of the Coconuts</a>) / <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <img src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" style="vertical-align: middle;"></div>
+    </footer>
+
+    <script type="text/javascript">
+        var view = {
+            lang: ko.observable('en'),
+
+            updateLang: function(newlang) {
+                if (!newlang) {
+                    if (window.location.hash) {
+                        newlang = window.location.hash.substring(1);
+                    } else {
+                        newlang = view.lang();
+                    }
+                }
+
+                view.lang(newlang);
+                window.location.hash = '#' + newlang;
+            },
+
+            selectRUS: function() {
+                view.updateLang('ru');
+            },
+
+            selectENG: function() {
+                view.updateLang('en');
+            }
+        }
+
+        // set default language by browser setting
+        if (navigator.language) {
+            if (navigator.language.indexOf('ru') >= 0) {
+                view.lang('ru');
+            } else if (navigator.language.indexOf('en') >= 0) {
+                view.lang('en');
+            }
+        }
+
+        ko.applyBindings(view);
+        view.updateLang();
+    </script>
+</body>
 </html>

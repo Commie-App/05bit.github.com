@@ -27,27 +27,52 @@
             </div>
         </header>
         
-        <article>
+        <section>
             <div data-bind="visible: lang() == 'en'">
-                <h2>We create web services making the world more open-hearted.</h2>
+                <h2>Innovations as is</h2>
                 <p>Drop us a line: <a href="mailto:contact@05bit.com">contact@05bit.com</a></p>
             </div>
             
             <div data-bind="visible: lang() == 'ru'">
-                <h2>Создаем веб-сервисы, делающие мир добрее и лучше.</h2>
+                <h2>Инновации и точка!</h2>
                 <p>E-mail: <a href="mailto:contact@05bit.com">contact@05bit.com</a></p>
             </div>
-        </article>
+        </section>
 
-        <article>
+        <section data-bind="visible: lang() == 'ru'">
+            <h2>Добро пожаловать</h2>
+
+            <p>Вы зашли к нам! Это прекрасно, здравствуйте!</p>
+
+            <p>Осматривайтесь, не стесняйтесь написать нам и задать вопросы.</p>
+        </section>
+
+        <section data-bind="visible: lang() == 'ru'">
+            <h2>Интро</h2>
+
+            <p>Мы разрабатываем веб-сервисы, в основе которых есть новая оригинальная идея.</p>
+
+            <p>Любим технологии и используем лучшие из них &mdash; те, с которыми приятно работать, которые эффективны, которые созданы передовыми инженерами мирового уровня:</p>
+
+            <ul>
+                <li><a href="http://python.org" target="_blank">Python</a> / <a href="http://djangoproject.com" target="_blank">Django</a> / <a href="http://flask.pocoo.org/" target="_blank">Flask</a></li>
+
+                <li>Javascript / <a href="http://jquery.com/" target="_blank">jQuery</a> / <a href="http://knockoutjs.com/" target="_blank">KnockoutJS</a> / <a href="http://twitter.github.com/bootstrap/" target="_blank">Bootstrap</a></li>
+                <li>"Облачные" сервисы <a href="http://aws.amazon.com/" target="_blank">Amazon</a> и <a href="http://cloud.google.com/" target="_blank">Google</a></li>
+            </ul>
+
+            <p>Мы максимально используем возможности существующих сервисов, не изобретая велосипеды. Знаем кун-фу платежных систем и авторизации через социальные сети.</p>
+        </section>
+
+        <section>
             <h2 data-bind="visible: lang() == 'en'">Featured Projects</h2>
             <h2 data-bind="visible: lang() == 'ru'">Проекты</h2>
 
             <table class="projects">
-                <tr data-bind="visible: lang() == 'ru'">
+                <!--tr data-bind="visible: lang() == 'ru'">
                     <td><a href="http://www.darimvmeste.ru" target="_blank">Дарим Вместе</a></td>
                     <td>&nbsp;</td>
-                </tr>
+                </tr-->
                 <tr>
                     <td><a href="http://www.gallerza.com" target="_blank">Gallerza</a></td>
                     <td><a href="http://www.qmazi.com" target="_blank">Qmazi</a></td>
@@ -61,11 +86,49 @@
                     <td><a href="http://itunes.apple.com/ru/app/how-mouse-played-ball-book/id483558719" target="_blank">Как мышка <br> играла в мячик</a></td>
                 </tr>
             </table>
+        </section>
 
-        </article>
+        <section data-bind="visible: lang() == 'ru'">
+            <table class="projects">
+                <tr>
+                    <td>
+                        <h3>Наши ресурсы</h2>
+                    </td>
+                    <td>
+                        <h3>Блоги</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://github.com/organizations/05bit" target="_blank">05Bit @ GutHub</a>
+                    </td>
+
+                    <td><a href="http://05bit.qmazi.com" target="_blank">05Bit @ Qmazi</a> </td>
+                </tr>
+                <tr>
+                    <td><a href="https://bitbucket.org/05bit" target="_blank">05Bit @ Bitbucket</a>
+                    </td>
+                    <td>
+                        <a href="http://uvavu.ru/" target="_blank">Uvavu.ru</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <a href="http://kiss-of-life.posterous.com/" target="_blank">Kiss Of Life</a>
+                    </td>
+                </tr>
+
+            </table>
+
+        </section>
+
+        <section data-bind="visible: lang() == 'ru'">
+            <h2>А что нужно вам?</h2>
+            <p>E-mail: <a href="mailto:contact@05bit.com">contact@05bit.com</a></p>
+        </section>
     </div>
     <footer>
-        &copy; 2012 05BIT, <a href="mailto:contact@05bit.com">contact@05bit.com</a>
+        &copy; 2012 <a href="http://05bit.com">05Bit</a></a>
 
         <div xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/" about="http://www.free-country-flags.com/flag_pack.php?id=1" style="font-size: smaller; margin-top: 25px;"><span property="dct:title">Free Country Flags</span> (<a rel="cc:attributionURL" property="cc:attributionName" href="http://www.free-country-flags.com/">Gang of the Coconuts</a>) / <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <img src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" style="vertical-align: middle;"></div>
     </footer>

@@ -27,7 +27,7 @@ ul.no-bullets, ul.no-bullets li {
     padding-left: 0;
 }
 #body-wrapper {
-    width: 840px;
+    width: 740px;
     margin-top: 60px;
     margin-left: 120px;
     }
@@ -47,9 +47,10 @@ ul.no-bullets, ul.no-bullets li {
     font-style: italic;
     color: #999;
     }
-#content article {
+#content section {
     margin-top: 60px;
     margin-left: 122px;
+
     }
 #content table.projects {
     width: 100%;
@@ -73,7 +74,7 @@ ul.no-bullets, ul.no-bullets li {
         color: #000;
         }
 footer {
-    margin-top: 30px;
+    margin-top: 90px;
     margin-bottom: 15px;
     color: #999;
     }
