@@ -26,7 +26,8 @@
                 <a href="#" data-bind="click: selectENG"><img src="/assets/img/flag_US.png" class="lang"></a>
             </div>
         </header>
-        
+
+        <!-- Heading -->        
         <section>
             <div data-bind="visible: lang() == 'en'">
                 <h2>Innovations as is</h2>
@@ -39,12 +40,38 @@
             </div>
         </section>
 
+        <!-- Welcome -->
         <section data-bind="visible: lang() == 'ru'">
             <h2>Добро пожаловать</h2>
 
             <p>Вы зашли к нам! Это прекрасно, здравствуйте!</p>
 
             <p>Осматривайтесь, не стесняйтесь написать нам и задать вопросы.</p>
+        </section>
+
+        <!-- Intro & Technologies -->
+        <section data-bind="visible: lang() == 'en'">
+            <h2>Intro</h2>
+
+            <p>We are programmers team focused on developing cutting edge web-services.</p>
+
+            <p>Technologies we use and love most:</p>
+
+            <p style="padding-left: 30px;">
+                <a style="padding-right: 30px;" href="http://www.djangoproject.com/" target="_blank"><img src="https://www.djangoproject.com/m/img/badges/djangopowered126x54.gif" border="0" alt="Powered by Django." title="Powered by Django." height="40" /></a>
+                
+                <a style="padding-right: 30px;" href="http://jquery.org" target="_blank"><img src="http://jquery.org/wp-content/uploads/2010/01/JQuery_logo_color_onwhite-300x74.png" height="30"></a>
+                
+                <a href="http://www.postgresql.org" target="_blank"><img src="http://www.postgresql.org/files/community/propaganda/95x51_4.gif" height="40"></a>
+            </p>
+
+            <p style="padding-left: 30px;">+
+                <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>,
+                <a href="http://knockoutjs.com/" target="_blank">KnockoutJS</a>,
+                <a href="http://aws.amazon.com/" target="_blank">Amazon web services</a>.
+            </p>
+
+            <p>Having such perfect technologies and experienced team we can create complex projects really fast.</p>
         </section>
 
         <section data-bind="visible: lang() == 'ru'">
@@ -63,7 +90,8 @@
 
             <p>Мы максимально используем возможности существующих сервисов, не изобретая велосипеды. Знаем кун-фу платежных систем и авторизации через социальные сети.</p>
         </section>
-
+        
+        <!-- Projects -->
         <section>
             <h2 data-bind="visible: lang() == 'en'">Featured Projects</h2>
             <h2 data-bind="visible: lang() == 'ru'">Проекты</h2>
@@ -88,14 +116,17 @@
             </table>
         </section>
 
-        <section data-bind="visible: lang() == 'ru'">
+        <!-- Resources -->
+        <section>
             <table class="projects">
                 <tr>
                     <td>
-                        <h3>Наши ресурсы</h2>
+                        <h3 data-bind="visible: lang() == 'ru'">Наши ресурсы</h3>
+                        <h3 data-bind="visible: lang() == 'en'">Open source</h3>
                     </td>
                     <td>
-                        <h3>Блоги</h2>
+                        <h3 data-bind="visible: lang() == 'ru'">Блоги</h3>
+                        <h3 data-bind="visible: lang() == 'en'">Blogs</h3>
                     </td>
                 </tr>
                 <tr>
@@ -122,11 +153,13 @@
 
         </section>
 
+        <!-- Finally -->
         <section data-bind="visible: lang() == 'ru'">
             <h2>А что нужно вам?</h2>
             <p>E-mail: <a href="mailto:contact@05bit.com">contact@05bit.com</a></p>
         </section>
     </div>
+
     <footer>
         &copy; 2012 <a href="http://05bit.com">05Bit</a></a>
 
