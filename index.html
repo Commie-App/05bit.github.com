@@ -27,22 +27,9 @@
             </div>
         </header>
 
-        <!-- Heading -->        
-        <section>
-            <div data-bind="visible: lang() == 'en'">
-                <h2>Innovations as is</h2>
-                <p>Drop us a line: <a href="mailto:contact@05bit.com">contact@05bit.com</a></p>
-            </div>
-            
-            <div data-bind="visible: lang() == 'ru'">
-                <h2>Инновации и точка!</h2>
-                <p>E-mail: <a href="mailto:contact@05bit.com">contact@05bit.com</a></p>
-            </div>
-        </section>
-
         <!-- Intro & Technologies -->
         <section data-bind="visible: lang() == 'en'">
-            <h2>Intro</h2>
+            <h2>Innovations as is</h2>
 
             <p>We are programmers team focused on developing cutting edge web-services.</p>
 
@@ -65,8 +52,10 @@
             <p>Having such perfect technologies and experienced team we can create complex projects really fast.</p>
         </section>
 
+
+
         <section data-bind="visible: lang() == 'ru'">
-            <h2>Интро</h2>
+            <h2>Инновации и точка!</h2>
 
             <p>Мы разрабатываем веб-сервисы, в основе которых есть новая оригинальная идея.</p>
 
@@ -81,7 +70,56 @@
 
             <p>Мы максимально используем возможности существующих сервисов, не изобретая велосипеды. Знаем кун-фу платежных систем и авторизации через социальные сети.</p>
         </section>
-        
+
+        <!-- Dreamteam =) -->        
+        <section>
+            <div data-bind="visible: lang() == 'en'">
+            <h2>Our team</h2>
+            <table class="projects">
+                <tr>
+                    <td>
+                        <a href="http://www.facebook.com/vsvasya">
+                            <img src="/assets/img/vasya.png" alt="Vasya Sadovnikov" />
+                        </a>
+                    </td>
+                    <td>
+                        <a href="http://www.facebook.com/rudyryk">
+                            <img src="/assets/img/alex.png" alt="Alexey Kinyov" />
+                        </a>
+                    </td>
+                    <td>
+                        <a href="http://www.facebook.com/funkypublic">
+                            <img src="/assets/img/pasha.png" alt="Pavel Shevelyov" />
+                        </a>
+                    </td>
+                </tr>
+            </table>
+            </div>
+            
+            <div data-bind="visible: lang() == 'ru'">
+            <h2>Команда</h2>
+            <table class="projects">
+                <tr>
+                    <td>
+                        <a href="http://www.facebook.com/vsvasya">
+                            <img src="/assets/img/vasya.png" alt="Vasya Sadovnikov" />
+                        </a>
+                    </td>
+                    <td>
+                        <a href="http://www.facebook.com/rudyryk">
+                            <img src="/assets/img/alex.png" alt="Alexey Kinyov" />
+                        </a>
+                    </td>
+                    <td>
+                        <a href="http://www.facebook.com/funkypublic">
+                            <img src="/assets/img/pasha.png" alt="Pavel Shevelyov" />
+                        </a>
+                    </td>
+                </tr>
+            </table>
+            </div>
+        </section>
+
         <!-- Projects -->
         <section>
             <h2 data-bind="visible: lang() == 'en'">Featured Projects</h2>
