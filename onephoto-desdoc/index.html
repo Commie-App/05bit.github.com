@@ -1,0 +1,224 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Техническое задание на Wallet Photo iPhone app &mdash; Wallet Photo iPhone application 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="copyright" title="Copyright" href="copyright.html" />
+    <link rel="top" title="Wallet Photo iPhone application 1.0 documentation" href="#" />
+    <link rel="next" title="Задание на копирайт" href="copyright.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="copyright.html" title="Задание на копирайт"
+             accesskey="N">next</a></li>
+        <li><a href="#">Wallet Photo iPhone application 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="wallet-photo-iphone-app">
+<h1><a class="toc-backref" href="#id11">Техническое задание на Wallet Photo iPhone app</a><a class="headerlink" href="#wallet-photo-iphone-app" title="Permalink to this headline">¶</a></h1>
+<div class="contents topic" id="id1">
+<p class="topic-title first">Основное задание</p>
+<ul class="simple">
+<li><a class="reference internal" href="#wallet-photo-iphone-app" id="id11">Техническое задание на Wallet Photo iPhone app</a><ul>
+<li><a class="reference internal" href="#id2" id="id12">Идея</a></li>
+<li><a class="reference internal" href="#id3" id="id13">Общее описание</a></li>
+<li><a class="reference internal" href="#id4" id="id14">Экраны приложения</a></li>
+<li><a class="reference internal" href="#id5" id="id15">Главный экран</a><ul>
+<li><a class="reference internal" href="#id6" id="id16">Замена фотографии</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id7" id="id17">Экран выбора фото</a></li>
+<li><a class="reference internal" href="#id8" id="id18">Стилистика, референсы</a></li>
+<li><a class="reference internal" href="#id9" id="id19">Технические характеристики</a></li>
+<li><a class="reference internal" href="#id10" id="id20">Дополнительный внутренний функционал (для программиста)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p><strong>Дополнительные документы</strong></p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="copyright.html">Задание на копирайт</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="copyright.html#id3">Стартовый экран</a></li>
+<li class="toctree-l2"><a class="reference internal" href="copyright.html#id4">Экран с выбранной фотографией</a></li>
+<li class="toctree-l2"><a class="reference internal" href="copyright.html#id5">Экран настроек</a></li>
+<li class="toctree-l2"><a class="reference internal" href="copyright.html#id6">Тексты уведомлений</a></li>
+<li class="toctree-l2"><a class="reference internal" href="copyright.html#app-store">Тексты для App Store</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2><a class="toc-backref" href="#id12">Идея</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Суть приложения: &#8220;любимая фотография в бумажнике&#8221;.</p>
+</div>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id13">Общее описание</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Устанавливается приложение и выбирается одна - только одна - фотография,
+которая показывается в &#8220;бумажнике&#8221;, когда открываешь приложение. То есть,
+используется паттерн, когда мужчины хранят любимое фото в бумажнике.
+Функциональная польза - посмотреть любимую фотографию в 1 клик. Такое
+романтичное приложение.</p>
+<img alt="_images/wallet1.jpg" src="_images/wallet1.jpg" style="height: 200px;" />
+<img alt="_images/example1.jpg" src="_images/example1.jpg" style="height: 200px;" />
+<img alt="_images/example2.jpg" src="_images/example2.jpg" style="height: 200px;" />
+</div>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id14">Экраны приложения</a><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><a class="reference internal" href="#id5">Главный экран</a></li>
+<li><a class="reference internal" href="#id7">Экран выбора фото</a></li>
+</ol>
+</div>
+<div class="section" id="id5">
+<h2><a class="toc-backref" href="#id15">Главный экран</a><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>На главном экране - статичное крупное изображение бумажника с кармашком для фотографии на весь экран.
+Кармашек - под квадратную фотографию. Верхней панели заголовка - нет, и вообще никаких служебных панелей нет.</p>
+<p>Когда фотография не выбрана, вместо неё показывается надпись:</p>
+<blockquote>
+<div>&#8220;Pick a Photo ...&#8221;, в русской версии: &#8220;Выберите фото ...&#8221;</div></blockquote>
+<p>Когда фото не выбрано, то при первом клике по экрану приложения происходит переход на <a class="reference internal" href="#id7">Экран выбора фото</a>.</p>
+<div class="section" id="id6">
+<h3><a class="toc-backref" href="#id16">Замена фотографии</a><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>Когда фото выбрано, то изменить фотографию можно нажав на специально предназначенную для этого кнопку. То есть, на экране должна быть такая кнопка. Оне не должна сильно выделяться, так как по задумке она не должна нажиматься часто.</p>
+<p>Кнопка может ассоциироваться с настройками - если в будущем у нас появятся настройки приложения, их так же можно быдет вызвать по этой кнопке.</p>
+</div>
+</div>
+<div class="section" id="id7">
+<h2><a class="toc-backref" href="#id17">Экран выбора фото</a><a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>Для выбора фотографии используется стандартный системный диалог. Можно выбрать фото из сохраненных либо сделать новую фотографию. Пример из приложения Tumblr:</p>
+<img alt="_images/take_or_pick_photo.png" src="_images/take_or_pick_photo.png" style="width: 25%;" />
+<img alt="_images/choose_photo.png" src="_images/choose_photo.png" style="width: 25%;" />
+</div>
+<div class="section" id="id8">
+<h2><a class="toc-backref" href="#id18">Стилистика, референсы</a><a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p>Пример ракурса:</p>
+<img alt="_images/waller-ref1.png" src="_images/waller-ref1.png" />
+<p>По стилистике - есть примерный вижн, что это должно выглядеть
+как &#8220;настоящий&#8221; кожанный бумажник - тактильный дизайн под
+коричневую кожу, но боллее &#8220;сочно&#8221; чем в реальности.</p>
+<p>Иконки, стиль:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://itunes.apple.com/ru/app/moneybook-upravlenie-budzetom/id337954399?mt=8">http://itunes.apple.com/ru/app/moneybook-upravlenie-budzetom/id337954399?mt=8</a></li>
+<li><a class="reference external" href="http://itunes.apple.com/ru/app/2do-tasks-done-in-style/id303656546?mt=8">http://itunes.apple.com/ru/app/2do-tasks-done-in-style/id303656546?mt=8</a></li>
+</ul>
+</div>
+<div class="section" id="id9">
+<h2><a class="toc-backref" href="#id19">Технические характеристики</a><a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p>Приложение запускается на полный экран и занимает весь экран, строка статуса скрывается. Ориентация экрана - альбомная, то есть горизонтально, на боку.</p>
+<p>Рабочее разрешение:</p>
+<ul class="simple">
+<li>940x640, для iPhone 4 и новее</li>
+<li>480x320, для iPhone 3GS и более старых</li>
+</ul>
+<p>Размеры иконок:</p>
+<ul class="simple">
+<li>57x57</li>
+<li>114x114</li>
+</ul>
+<p>Большая иконка для App Store:</p>
+<ul class="simple">
+<li>512x512</li>
+</ul>
+<p>Splash экран для загрузки - не требуется.</p>
+</div>
+<div class="section" id="id10">
+<h2><a class="toc-backref" href="#id20">Дополнительный внутренний функционал (для программиста)</a><a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<p>При установке должна запоминаться текущая версия приложения, так как возможно будет меняться логика покупки и появится In-App Purchase. Потребуется определять, установлено приложение с нуля, либо произошло обновление приложения.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Техническое задание на Wallet Photo iPhone app</a><ul>
+<li><a class="reference internal" href="#id2">Идея</a></li>
+<li><a class="reference internal" href="#id3">Общее описание</a></li>
+<li><a class="reference internal" href="#id4">Экраны приложения</a></li>
+<li><a class="reference internal" href="#id5">Главный экран</a><ul>
+<li><a class="reference internal" href="#id6">Замена фотографии</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id7">Экран выбора фото</a></li>
+<li><a class="reference internal" href="#id8">Стилистика, референсы</a></li>
+<li><a class="reference internal" href="#id9">Технические характеристики</a></li>
+<li><a class="reference internal" href="#id10">Дополнительный внутренний функционал (для программиста)</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Next topic</h4>
+  <p class="topless"><a href="copyright.html"
+                        title="next chapter">Задание на копирайт</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="copyright.html" title="Задание на копирайт"
+             >next</a></li>
+        <li><a href="#">Wallet Photo iPhone application 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; <a href="copyright.html">Copyright</a> 2012, Alexey Kinyov.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
