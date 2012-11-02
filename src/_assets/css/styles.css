@@ -27,7 +27,7 @@ ul.no-bullets, ul.no-bullets li {
     padding-left: 0;
 }
 #body-wrapper {
-    width: 740px;
+    /*width: 740px;*/
     margin-top: 60px;
     margin-left: 120px;
     }
@@ -60,6 +60,22 @@ ul.no-bullets, ul.no-bullets li {
         width: 50%;
         font-size: 20px;
         }
+
+/** App widget
+*/
+.app_widget {
+
+}
+    .app_widget .image {
+        display: inline-block;
+        line-height: 0px;
+        box-shadow: 0px 0px 10px #aaa;
+        margin-right: 20px;
+    }
+    .app_widget .text {
+        display: inline-block;
+        vertical-align: top;
+    }
 
 #post-header {
     margin-top: 30px;

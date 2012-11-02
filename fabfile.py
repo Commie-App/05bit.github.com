@@ -1,11 +1,14 @@
 from fabric.api import *
 import os
 
+BUILD_DIR = '.build'
 PROJECT_DIR = os.path.realpath(os.path.dirname(__file__))
         
 def build():
-    local('mynt gen -f src .build')
-    local('rsync -r .build/ ./')
+    if os.path.exists(BUILD_DIR):
+        local('rm -r %s' % BUILD_DIR)
+    local('mynt gen -f src %s' % BUILD_DIR)
+    local('rsync -r %s/ %s/' % (BUILD_DIR, PROJECT_DIR))
 
 def deploy():
     pass

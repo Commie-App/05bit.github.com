@@ -3,21 +3,34 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="development, python, django, iOS, iPhone, iPad, web services, mobile applications, mobile apps development, awareness development">
-    <meta name="description" content="Cutting edge web development. Python / Django, Javascript / jQuery / KnockoutJS / Bootstrap. Разработка веб-сервисов.">
     <title>05BIT</title>
-    <link rel="icon" type="image/gif" href="/assets/favicon.png" />
+
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
     <link href='http://fonts.googleapis.com/css?family=Michroma' rel='stylesheet' type='text/css' />
 
-    <!--[if IE]>  
+    <!--[if lt IE 9]>
         <script src="/assets/js/html5.js"></script>
-    <![endif]--> 
-    <script type="text/javascript" src="/assets/js/knockout-2.0.0.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+        <link rel="icon" type="image/gif" href="/assets/favicon.gif" />
+    <![endif]-->
+
+    <link href="/assets/css/grid.css" rel='stylesheet' type='text/css' />
     <link href="/assets/css/styles.css" rel='stylesheet' type='text/css' />
+
+    
+    <meta name="keywords" content="development, python, django, iOS, iPhone, iPad, web services, mobile applications, mobile apps development, awareness development">
+    <meta name="description" content="Cutting edge web development. Python / Django, Javascript / jQuery / KnockoutJS / Bootstrap. Разработка веб-сервисов.">
+    
 </head>
 
 <body id="body-wrapper">
+    
+
+    
+
     <div id="content">
+        <!-- Logo -->
         <header id="page-header">
             <div class="logo">
                 <img src="/assets/img/logo.gif" alt=":)" />
@@ -27,9 +40,54 @@
             </div>
         </header>
 
+        <!-- Heading -->
+        <section>
+            <div data-bind="visible: lang() == 'en'">
+                <h2>Innovations as is</h2>
+                <p>Drop us a line: <a href="mailto:contact@05bit.com">contact@05bit.com</a></p>
+            </div>
+            
+            <div data-bind="visible: lang() == 'ru'">
+                <h2>Инновации и точка!</h2>
+                <p>E-mail: <a href="mailto:contact@05bit.com">contact@05bit.com</a></p>
+            </div>
+        </section>
+
+        <!-- News -->
+        <section class="container container_12 clearfix">
+            <div class="grid_6 app_widget">
+                <div class="image">
+                    <a href="/onephoto/"><img src="/assets/img/onephoto.png" width="200px"></a>
+                </div>
+                <div class="text">
+                    <h2>One Photo</h2>
+                    <p data-bind="visible: lang() == 'en'"><em>19 October 2012</em><br>
+                        New app One Photo v1.0<br> released! <a href="/onephoto/">Read more &raquo;</a>
+                    </p>
+                    <p data-bind="visible: lang() == 'ru'"><em>19 октября 2012</em><br>
+                        Вышло приложение<br>One Photo! <a href="/onephoto/">Подробнее &raquo;</a>
+                    </p>
+                    <p data-bind="visible: lang() == 'en'">
+                        <a href="https://itunes.apple.com/us/app/one-photo/id540976962" target="_blank">
+                            <img src="/assets/img/app_store_small.png">
+                        </a>
+                    </p>
+                    <p data-bind="visible: lang() == 'ru'">
+                        <a href="https://itunes.apple.com/ru/app/one-photo/id540976962" target="_blank">
+                            <img src="/assets/img/app_store_small.png">
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid_6">
+                <!-- <h2>News</h2> -->
+            </div>
+        </section>
+
         <!-- Intro & Technologies -->
         <section data-bind="visible: lang() == 'en'">
-            <h2>Innovations as is</h2>
+            <h2>Intro</h2>
 
             <p>We are programmers team focused on developing cutting edge web-services.</p>
 
@@ -52,10 +110,8 @@
             <p>Having such perfect technologies and experienced team we can create complex projects really fast.</p>
         </section>
 
-
-
         <section data-bind="visible: lang() == 'ru'">
-            <h2>Инновации и точка!</h2>
+            <h2>Интро</h2>
 
             <p>Мы разрабатываем веб-сервисы, в основе которых есть новая оригинальная идея.</p>
 
@@ -72,8 +128,8 @@
         </section>
 
         <!-- Dreamteam =) -->        
-        <section>
-            <div data-bind="visible: lang() == 'en'">
+        <section class="container container_12 clearfix">
+            <div data-bind="visible: lang() == 'en'" class="grid_8">
             <h2>Our team</h2>
             <table class="projects">
                 <tr>
@@ -96,7 +152,7 @@
             </table>
             </div>
             
-            <div data-bind="visible: lang() == 'ru'">
+            <div data-bind="visible: lang() == 'ru'" class="grid_8">
             <h2>Команда</h2>
             <table class="projects">
                 <tr>
@@ -189,11 +245,23 @@
         </section>
     </div>
 
-    <footer>
-        &copy; 2012 <a href="http://05bit.com">05Bit</a></a>
 
-        <div xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/" about="http://www.free-country-flags.com/flag_pack.php?id=1" style="font-size: smaller; margin-top: 25px;"><span property="dct:title">Free Country Flags</span> (<a rel="cc:attributionURL" property="cc:attributionName" href="http://www.free-country-flags.com/">Gang of the Coconuts</a>) / <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <img src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" style="vertical-align: middle;"></div>
+
+
+    
+    <footer class="container container_12 clearfix">
+        <div class="grid_12">
+
+            &copy; 2012 <a href="http://05bit.com">05Bit</a></a>
+
+            <div xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/" about="http://www.free-country-flags.com/flag_pack.php?id=1" style="font-size: smaller; margin-top: 25px;"><span property="dct:title">Free Country Flags</span> (<a rel="cc:attributionURL" property="cc:attributionName" href="http://www.free-country-flags.com/">Gang of the Coconuts</a>) / <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <img src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" style="vertical-align: middle;"></div>
+
+        </div>
     </footer>
+    
+
+    
+    <script type="text/javascript" src="/assets/js/knockout-2.0.0.js"></script>
 
     <script type="text/javascript">
         var view = {
@@ -233,5 +301,6 @@
         ko.applyBindings(view);
         view.updateLang();
     </script>
+
 </body>
 </html>
