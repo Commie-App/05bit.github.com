@@ -26,6 +26,10 @@ ul.no-bullets, ul.no-bullets li {
     margin-left: 0;
     padding-left: 0;
 }
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+}
 
 #content header {
     width: 600px;
@@ -69,7 +73,7 @@ ul.no-bullets, ul.no-bullets li {
 /** Team section
 */
 h2.team {
-    margin-top: 30px;
+    margin-top: 60px;
     margin-bottom: 15px;
     text-align: center;
     font-size: 3em;
@@ -107,6 +111,23 @@ h2.team {
             /*border: 1px solid #aaa;*/
             background-size: 200px 200px;
         }
+
+/** Technologies
+*/
+
+.techs {
+
+}
+    .techs a {
+        display: inline-block;
+        margin-right: 30px;
+        height: 75px;
+        /*margin-bottom: 20px;*/
+    }
+    .techs img {
+        max-width: 150px;
+        max-height: 75px;
+    }
 
 /** App widget
 */

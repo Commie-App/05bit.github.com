@@ -42,19 +42,46 @@
 
         <!-- Heading -->
         <section>
-            <div data-bind="visible: lang() == 'en'">
-                <h2>Innovations as is</h2>
-                <p>Drop us a line: <a href="mailto:contact@05bit.com">contact@05bit.com</a></p>
+            <h1 data-bind="visible: lang() == 'en'">Team of Python / Django developers</h1>
+            <h1 data-bind="visible: lang() == 'ru'">Команда Python / Django разработчиков</h1>
+
+            <p>
+                <span data-bind="visible: lang() == 'en'">We're based in Russian Federation &mdash; Moscow and St. Petersburg (GMT+4).</span>
+                <span data-bind="visible: lang() == 'ru'">Мы находимся в Москве и в Санкт-Петербурге.</span>                
+            </p>
+
+            <p>
+                E-mail: <a href="mailto:contact@05bit.com">contact@05bit.com</a>
+            </p>
+        </section>
+
+        <hr>
+
+        <!-- Intro -->
+        <section class="container container_12 clearfix">
+            <div class="grid_3">
+                <h2 data-bind="visible: lang() == 'en'">Intro</h2>
+                <h2 data-bind="visible: lang() == 'ru'">Интро</h2>
             </div>
-            
-            <div data-bind="visible: lang() == 'ru'">
-                <h2>Инновации и точка!</h2>
-                <p>E-mail: <a href="mailto:contact@05bit.com">contact@05bit.com</a></p>
+            <div class="grid_9">
+                <p data-bind="visible: lang() == 'en'">
+                    We do programming.<br>
+                    We can develop complex or simple<br>
+                    <a href="#projects">web service</a>, <a href="#projects">site</a> or <a href="#projects">server-side</a> for you.
+                </p>
+                <p data-bind="visible: lang() == 'ru'">
+                    Мы занимаемся программированием.<br>
+                    Мы готовы разработать для вас <a href="#projects">веб-сервис</a>,<br>
+                    <a href="#projects">сайт</a> или <a href="#projects">серверную часть вашего продукта</a>.
+                </p>
             </div>
         </section>
 
         <!-- News -->
         <section class="container container_12 clearfix">
+            <div class="grid_3">
+                <h2>Новости</h2>
+            </div>
             <div class="grid_6 app_widget">
                 <div class="image">
                     <a href="/onephoto/"><img src="/assets/img/onephoto.png" width="200px"></a>
@@ -80,54 +107,12 @@
                 </div>
             </div>
 
-            <div class="grid_6">
+            <div class="grid_3">
                 <!-- <h2>News</h2> -->
             </div>
         </section>
 
-        <!-- Intro & Technologies -->
-        <section data-bind="visible: lang() == 'en'">
-            <h2>Intro</h2>
-
-            <p>We are programmers team focused on developing cutting edge web-services.</p>
-
-            <p>Technologies we use and love most:</p>
-
-            <p style="padding-left: 30px;">
-                <a style="padding-right: 30px;" href="http://www.djangoproject.com/" target="_blank"><img src="https://www.djangoproject.com/m/img/badges/djangopowered126x54.gif" border="0" alt="Powered by Django." title="Powered by Django." height="40" /></a>
-                
-                <a style="padding-right: 30px;" href="http://jquery.org" target="_blank"><img src="http://jquery.org/wp-content/uploads/2010/01/JQuery_logo_color_onwhite-300x74.png" height="30"></a>
-                
-                <a href="http://www.postgresql.org" target="_blank"><img src="http://www.postgresql.org/files/community/propaganda/95x51_4.gif" height="40"></a>
-            </p>
-
-            <p style="padding-left: 30px;">+
-                <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>,
-                <a href="http://knockoutjs.com/" target="_blank">KnockoutJS</a>,
-                <a href="http://aws.amazon.com/" target="_blank">Amazon web services</a>.
-            </p>
-
-            <p>Having such perfect technologies and experienced team we can create complex projects really fast.</p>
-        </section>
-
-        <section data-bind="visible: lang() == 'ru'">
-            <h2>Интро</h2>
-
-            <p>Мы разрабатываем веб-сервисы, в основе которых есть новая оригинальная идея.</p>
-
-            <p>Любим технологии и используем лучшие из них &mdash; те, с которыми приятно работать, которые эффективны, которые созданы передовыми инженерами мирового уровня:</p>
-
-            <ul>
-                <li><a href="http://python.org" target="_blank">Python</a> / <a href="http://djangoproject.com" target="_blank">Django</a> / <a href="http://flask.pocoo.org/" target="_blank">Flask</a></li>
-
-                <li>Javascript / <a href="http://jquery.com/" target="_blank">jQuery</a> / <a href="http://knockoutjs.com/" target="_blank">KnockoutJS</a> / <a href="http://twitter.github.com/bootstrap/" target="_blank">Bootstrap</a></li>
-                <li>"Облачные" сервисы <a href="http://aws.amazon.com/" target="_blank">Amazon</a> и <a href="http://cloud.google.com/" target="_blank">Google</a></li>
-            </ul>
-
-            <p>Мы максимально используем возможности существующих сервисов, не изобретая велосипеды. Знаем кун-фу платежных систем и авторизации через социальные сети.</p>
-        </section>
-
-        <!-- Dreamteam =) -->
+        <!-- Dreamteam -->
         <h2 class="team" data-bind="visible: lang() == 'en'">Our team</h2>
         <h2 class="team" data-bind="visible: lang() == 'ru'">Команда</h2>
         <section class="team clearfix">
@@ -146,6 +131,43 @@
                     <div class="image" style="background-image: url(/assets/img/pasha.png)"></div>
                     Pavel Shevelyov
                 </a>
+            </div>
+        </section>
+
+        <!-- Technologies -->
+        <section class="container container_12 clearfix">
+            <div class="grid_3">
+                <h2 data-bind="visible: lang() == 'en'">Technologies<br>we use</h2>
+                <h2 data-bind="visible: lang() == 'ru'">Используемые<br>технологии</h2>
+            </div>
+
+            <div class="grid_9 techs">
+                <a href="http://python.org" target="_blank"><img src="/assets/img/logo-python.png"></a>
+
+                <a href="http://djangoproject.com" target="_blank"><img src="/assets/img/logo-django.png"></a>
+
+                <a href="http://www.html5rocks.com" target="_blank"><img src="/assets/img/logo-html5.png"></a>
+
+                <a href="http://jquery.org" target="_blank"><img src="/assets/img/logo-jquery.png"></a>
+
+                <a href="http://redis.io" target="_blank"><img src="/assets/img/logo-redis.png"></a>
+
+                <a href="http://www.postgresql.org" target="_blank"><img src="/assets/img/logo-postgresql.png"></a>
+
+                <a href="http://knockoutjs.com" target="_blank"><img src="/assets/img/logo-knockoutjs.png"></a>
+
+                <a href="http://sendgrid.com" target="_blank"><img src="/assets/img/logo-sendgrid.jpg"></a>
+
+                <a href="http://aws.amazon.com" target="_blank"><img src="/assets/img/logo-aws.png"></a>
+
+                <a href="http://aws.amazon.com" target="_blank"><img src="/assets/img/logo-ubuntu.png"></a>
+
+                <p data-bind="visible: lang() == 'en'">Having such perfect technologies and experienced team
+                <br>we can create complex projects really fast.</p>
+
+                <p data-bind="visible: lang() == 'ru'">Имея в распоряжении такие прекрасные технологии, мы можем<br>
+                    создавать продукты быстро, качественно и с удовольствием.</p>
+
             </div>
         </section>
 
@@ -176,6 +198,7 @@
 
         <!-- Resources -->
         <section>
+            <a name="projects"></a>
             <table class="projects">
                 <tr>
                     <td>
@@ -212,8 +235,9 @@
         </section>
 
         <!-- Finally -->
-        <section data-bind="visible: lang() == 'ru'">
-            <h2>А что нужно вам?</h2>
+        <section>
+            <h2 data-bind="visible: lang() == 'en'">Have a question?</h2>
+            <h2 data-bind="visible: lang() == 'ru'">Есть вопросы?</h2>
             <p>E-mail: <a href="mailto:contact@05bit.com">contact@05bit.com</a></p>
         </section>
     </div>
@@ -225,7 +249,7 @@
     <footer class="container container_12 clearfix">
         <div class="grid_12">
 
-            &copy; 2012 <a href="http://05bit.com">05Bit</a></a>
+            &copy; 2012-2013 <a href="http://05bit.com">05Bit</a></a>
 
             <div xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/" about="http://www.free-country-flags.com/flag_pack.php?id=1" style="font-size: smaller; margin-top: 25px;"><span property="dct:title">Free Country Flags</span> (<a rel="cc:attributionURL" property="cc:attributionName" href="http://www.free-country-flags.com/">Gang of the Coconuts</a>) / <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <img src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" style="vertical-align: middle;"></div>
 
