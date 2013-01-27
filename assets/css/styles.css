@@ -26,11 +26,7 @@ ul.no-bullets, ul.no-bullets li {
     margin-left: 0;
     padding-left: 0;
 }
-#body-wrapper {
-    /*width: 740px;*/
-    margin-top: 60px;
-    margin-left: 120px;
-    }
+
 #content header {
     width: 600px;
     }
@@ -49,8 +45,7 @@ ul.no-bullets, ul.no-bullets li {
     }
 #content section {
     margin-top: 60px;
-    margin-left: 122px;
-
+    margin-left: 242px;
     }
 #content table.projects {
     width: 100%;
@@ -59,6 +54,58 @@ ul.no-bullets, ul.no-bullets li {
         padding: 10px 0px 10px 0px;
         width: 50%;
         font-size: 20px;
+        }
+
+#page-header {
+    margin-left: 120px;
+}
+
+/** Home page
+*/
+#home {
+    margin-top: 60px;
+}
+
+/** Team section
+*/
+h2.team {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 3em;
+}
+#content section.team {
+    margin-left: 0;
+    margin-top: 0;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-shadow: inset 0px 0px 12px #ccc;
+    background-image: url(../patterns/gray_jean.png);
+}
+    #content section.team .members-list {
+        /*margin: 0 auto;*/
+        text-align: center;
+    }
+    #content section.team a.member {
+        display: inline-block;
+        margin-left: 40px;
+        margin-right: 40px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 2em;
+        color: #000;
+    }
+        #content section.team a.member .image {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 20px;
+            border-radius: 100px;
+            overflow: hidden;
+            box-shadow: inset 0px 0px 12px #555;
+            /*border: 1px solid #aaa;*/
+            background-size: 200px 200px;
         }
 
 /** App widget

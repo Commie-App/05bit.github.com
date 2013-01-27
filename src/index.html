@@ -5,10 +5,8 @@
     <meta name="description" content="Cutting edge web development. Python / Django, Javascript / jQuery / KnockoutJS / Bootstrap. Разработка веб-сервисов.">
 {% endblock %}
 
-{% block body_attrs %} id="body-wrapper"{% endblock %}
-
 {% block content %}
-
+<div id="home">
     <div id="content">
         <!-- Logo -->
         <header id="page-header">
@@ -107,52 +105,25 @@
             <p>Мы максимально используем возможности существующих сервисов, не изобретая велосипеды. Знаем кун-фу платежных систем и авторизации через социальные сети.</p>
         </section>
 
-        <!-- Dreamteam =) -->        
-        <section class="container container_12 clearfix">
-            <div data-bind="visible: lang() == 'en'" class="grid_8">
-            <h2>Our team</h2>
-            <table class="projects">
-                <tr>
-                    <td>
-                        <a href="http://www.facebook.com/vsvasya">
-                            <img src="/assets/img/vasya.png" alt="Vasya Sadovnikov" />
-                        </a>
-                    </td>
-                    <td>
-                        <a href="http://www.facebook.com/rudyryk">
-                            <img src="/assets/img/alex.png" alt="Alexey Kinyov" />
-                        </a>
-                    </td>
-                    <td>
-                        <a href="http://www.facebook.com/funkypublic">
-                            <img src="/assets/img/pasha.png" alt="Pavel Shevelyov" />
-                        </a>
-                    </td>
-                </tr>
-            </table>
-            </div>
-            
-            <div data-bind="visible: lang() == 'ru'" class="grid_8">
-            <h2>Команда</h2>
-            <table class="projects">
-                <tr>
-                    <td>
-                        <a href="http://www.facebook.com/vsvasya">
-                            <img src="/assets/img/vasya.png" alt="Vasya Sadovnikov" />
-                        </a>
-                    </td>
-                    <td>
-                        <a href="http://www.facebook.com/rudyryk">
-                            <img src="/assets/img/alex.png" alt="Alexey Kinyov" />
-                        </a>
-                    </td>
-                    <td>
-                        <a href="http://www.facebook.com/funkypublic">
-                            <img src="/assets/img/pasha.png" alt="Pavel Shevelyov" />
-                        </a>
-                    </td>
-                </tr>
-            </table>
+        <!-- Dreamteam =) -->
+        <h2 class="team" data-bind="visible: lang() == 'en'">Our team</h2>
+        <h2 class="team" data-bind="visible: lang() == 'ru'">Команда</h2>
+        <section class="team clearfix">
+            <div class="members-list">
+                <a class="member" href="{{ get_url('rudyryk/') }}">
+                    <div class="image" style="background-image: url(/assets/img/rudyryk.jpg)"></div>
+                    Alexey Kinyov<!--<br>// @rudyryk-->
+                </a>
+
+                <a class="member" href="http://www.facebook.com/vsvasya">
+                    <div class="image" style="background-image: url(/assets/img/vsvasya.jpg)"></div>
+                    Vasily Sadovnikov
+                </a>
+
+                <a class="member" href="http://www.facebook.com/funkypublic">
+                    <div class="image" style="background-image: url(/assets/img/pasha.png)"></div>
+                    Pavel Shevelyov
+                </a>
             </div>
         </section>
 
@@ -224,7 +195,7 @@
             <p>E-mail: <a href="mailto:contact@05bit.com">contact@05bit.com</a></p>
         </section>
     </div>
-
+</div>
 
 {% endblock %}
 
