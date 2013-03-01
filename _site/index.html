@@ -13,10 +13,10 @@
         <!-- Logo -->
         <header id="page-header">
             <div class="logo">
-                <img src="/assets/img/logo.gif" alt=":)" />
+                <img src="{{ get_asset('img/logo.gif') }}" alt=":)" />
                 <span>05BIT</span>
-                <a href="#" data-bind="click: selectRUS"><img src="/assets/img/flag_RU.png" class="lang"></a>
-                <a href="#" data-bind="click: selectENG"><img src="/assets/img/flag_US.png" class="lang"></a>
+                <a href="#" data-bind="click: selectRUS"><img src="{{ get_asset('img/flag_RU.png') }}" class="lang"></a>
+                <a href="#" data-bind="click: selectENG"><img src="{{ get_asset('img/flag_US.png') }}" class="lang"></a>
             </div>
         </header>
 
@@ -98,17 +98,17 @@
         <section class="team clearfix">
             <div class="members-list">
                 <a class="member" href="{{ get_url('rudyryk/') }}">
-                    <div class="image" style="background-image: url(/assets/img/rudyryk.jpg)"></div>
+                    <div class="image" style="background-image: url({{ get_asset('img/rudyryk.jpg') }})"></div>
                     Alexey Kinyov<!--<br>// @rudyryk-->
                 </a>
 
                 <a class="member" href="http://www.facebook.com/vsvasya">
-                    <div class="image" style="background-image: url(/assets/img/vsvasya.jpg)"></div>
+                    <div class="image" style="background-image: url({{ get_asset('img/vsvasya.jpg') }})"></div>
                     Vasily Sadovnikov
                 </a>
 
                 <a class="member" href="http://www.facebook.com/funkypublic">
-                    <div class="image" style="background-image: url(/assets/img/pasha.png)"></div>
+                    <div class="image" style="background-image: url({{ get_asset('img/pasha.png') }})"></div>
                     Pavel Shevelyov
                 </a>
             </div>
@@ -226,7 +226,7 @@
 {% endblock %}
 
 {% block extra_js %}
-    <script type="text/javascript" src="/assets/js/knockout-2.0.0.js"></script>
+    <script type="text/javascript" src="{{ get_asset('js/knockout-2.0.0.js') }}"></script>
 
     <script type="text/javascript">
         var view = {
