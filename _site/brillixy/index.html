@@ -1,0 +1,116 @@
+{% extends "brillixy.html" %}
+
+{% block content_title %}
+Brillixy &mdash; <small>nifty Django admin interface</small>
+{% endblock %}
+
+{% block content_text %}
+<hr>
+<div class="overview">
+    <div id="slides">
+        <div class="slides_container">
+            <div>
+                <img src="{{ get_asset('img/brillixy_1.png') }}">
+            </div>
+            <div>
+                <img src="{{ get_asset('img/brillixy_2.png') }}">
+            </div>
+            <div>
+                <img src="{{ get_asset('img/brillixy_3.png') }}">
+            </div>
+        </div>
+    </div>
+
+    <div id="get-link">
+        <a href="#pricing" class="btn btn-large btn-primary">Get Brillixy</a>
+        <!-- <a href="#demo" class="btn btn-success" target="_blank">Launch demo &rarr;</a> -->
+    </div>
+</div>
+<hr>
+
+<textarea class="marked">
+## Overview & Features
+
+ * Responsive layout powered by [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
+ * Original admin features supported: inlines, widgets, etc.
+ * Header logo & title can be changed easily
+ * Customizable dashboard panels 
+
+
+## <a name="pricing"></a>Pricing & License
+
+ * FREE for NON-commercial  
+ <small>Brillixy by is licensed under a Creative Commons  
+    Attribution-NonCommercial 3.0 Unported License  
+    http://creativecommons.org/licenses/by-nc/3.0/</small>
+
+ * **25$** for single developer commercial license  
+ <small>Please contact Alexey Kinyov <rudy@05bit.com></small>
+
+    Commercial license conditions:
+
+     + 30-day moneyback
+     + Updates forever for free
+     + Support on "best effort" basis
+     + Integration with unlimited number of commercial sites
+
+## Installation & Docs
+
+1. Install using `pip`:
+
+    ```
+    pip install brillixy
+    ```
+
+    or get source from GitHub https://github.com/05bit/brillixy
+
+2. Add `brillixy` to `INSTALLED_APPS` **before(!)** `django.contrib.admin`:
+
+    ```python
+    INSTALLED_APPS = (
+        # ...
+        
+        # Brillixy app should go before django admin:
+        'brillixy',
+        
+        # Uncomment the next line to enable the admin:
+        'django.contrib.admin',
+
+        # ...
+    )
+    ```
+
+3. Add initialization code to ``urls.py`` right after Django admin autodiscover code:
+
+    ```python
+    # Uncomment the next two lines to enable the admin:
+    from django.contrib import admin
+    admin.autodiscover()
+
+    # Setup Brillixy
+    from brillixy import site as brillixy
+    brillixy.setup(admin.site)
+    ```
+
+4. Tada!
+
+See source code of an [Example project](https://github.com/05bit/brillixy/tree/master/example) for more details.
+
+## Contact
+
+Drop me a line to <rudy@05bit.com> if you have questions or want to say something :)
+</textarea>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ get_asset('lib/jquery/slides.min.jquery.js') }}"></script>
+<script type="text/javascript">
+$(function(){
+    $("#slides").slides({
+        effect: 'fade',
+        play: 10000,
+        fadeSpeed: 600
+    });
+});
+</script>
+{% endblock %}

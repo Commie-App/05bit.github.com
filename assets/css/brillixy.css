@@ -1,0 +1,113 @@
+/** (c) 2011 05BIT,
+    Alexey Kinyov
+    rudy@05bit.com
+*/
+body {
+    font-size: 16px;
+}
+/*a, a:visited {
+    text-decoration: none;
+    color: #00f;
+}
+a:hover {
+    text-decoration: underline;
+}*/
+h1, h2, h3 {
+    color: #999;
+    font-weight: normal;
+    margin-top: 30px;
+}
+/*ul.no-bullets, ul.no-bullets li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+*/
+textarea.marked {
+    display: none;
+}
+
+pre {
+    width: 50%;
+}
+
+/** Header
+*/
+
+header {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+    header a, header a:hover {
+        text-decoration: none;
+    }
+    header span {
+        font-family: 'Michroma', sans-serif;
+        font-size: 24px;
+        color: #000;
+        }
+
+/** Footer
+*/
+footer {
+    margin-top: 90px;
+    margin-bottom: 15px;
+    color: #999;
+}
+footer a {
+    color: #999 !important;
+    text-decoration: none;
+}
+
+/** Overview
+*/
+
+#get-link {
+    text-align: center;
+}
+
+/** Slides
+*/
+#slides {
+    /*background-color: #ccc;*/
+}
+.slides_container {
+    background-color: #eee;
+    box-shadow: 1px 1px 3px #eee;
+    padding: 1px;
+    width: 600px;
+    height: 313px;
+    margin: 0 auto;
+}
+    .slides_container div {
+        width: 600px;
+        height: 313px;
+        display: block;
+    }
+
+.pagination {
+    display: block;
+    margin: 6px auto 0;
+    padding: 0;
+    list-style: none;
+    height: 30px;
+    width: 48px;
+}
+    .pagination li {
+        float: left;
+        margin: 0;/* 1px;*/
+        width: 16px;
+        /*display: block;*/
+    }
+    .pagination li a {
+        display: block;
+        width: 13px;
+        height: 0;
+        padding-top: 13px;
+        background-image: url(../img/pagination.png);
+        background-position: 0 0;
+        float: left;
+        overflow: hidden;
+    }
+    .pagination li.current a, .pagination li.current a:hover { background-position: 0 -13px }
+    .pagination li a:hover { background-position: 0 -26px }

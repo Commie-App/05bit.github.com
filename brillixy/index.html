@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Brillixy - 05Bit</title>
+
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <link href='http://fonts.googleapis.com/css?family=Michroma' rel='stylesheet' type='text/css' />
+
+    <!--[if lt IE 9]>
+        <script src="/assets/js/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+        <link rel="icon" type="image/gif" href="/assets/favicon.gif" />
+    <![endif]-->
+
+    <!-- bootstrap -->
+    <link href="/assets/lib/bootstrap/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <!-- highlightjs -->
+    <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css">
+    <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+    <!-- marked -->
+    <script src="/assets/lib/jquery/jquery-1.9.1.min.js"></script>
+    <script src="/assets/lib/marked.js"></script>
+    <!-- brillixy -->
+    <link href="/assets/css/brillixy.css" rel='stylesheet' type='text/css' />
+    <script src="/assets/js/brillixy.js"></script>
+        
+</head>
+
+<body>
+    
+    <header class="container">
+        <div class="span12">
+            <a href="/"><img src="/assets/img/logo.gif" width="36px"> <span>05BIT</span></a>
+        </div>
+    </header>
+    
+
+    
+    <div class="brillixy container clearfix">
+        <div class="span12">
+            <h1>
+Brillixy &mdash; <small>nifty Django admin interface</small>
+</h1>
+            <div class="text">
+                
+<hr>
+<div class="overview">
+    <div id="slides">
+        <div class="slides_container">
+            <div>
+                <img src="/assets/img/brillixy_1.png">
+            </div>
+            <div>
+                <img src="/assets/img/brillixy_2.png">
+            </div>
+            <div>
+                <img src="/assets/img/brillixy_3.png">
+            </div>
+        </div>
+    </div>
+
+    <div id="get-link">
+        <a href="#pricing" class="btn btn-large btn-primary">Get Brillixy</a>
+        <!-- <a href="#demo" class="btn btn-success" target="_blank">Launch demo &rarr;</a> -->
+    </div>
+</div>
+<hr>
+
+<textarea class="marked">
+## Overview & Features
+
+ * Responsive layout powered by [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
+ * Original admin features supported: inlines, widgets, etc.
+ * Header logo & title can be changed easily
+ * Customizable dashboard panels 
+
+
+## <a name="pricing"></a>Pricing & License
+
+ * FREE for NON-commercial  
+ <small>Brillixy by is licensed under a Creative Commons  
+    Attribution-NonCommercial 3.0 Unported License  
+    http://creativecommons.org/licenses/by-nc/3.0/</small>
+
+ * **25$** for single developer commercial license  
+ <small>Please contact Alexey Kinyov <rudy@05bit.com></small>
+
+    Commercial license conditions:
+
+     + 30-day moneyback
+     + Updates forever for free
+     + Support on "best effort" basis
+     + Integration with unlimited number of commercial sites
+
+## Installation & Docs
+
+1. Install using `pip`:
+
+    ```
+    pip install brillixy
+    ```
+
+    or get source from GitHub https://github.com/05bit/brillixy
+
+2. Add `brillixy` to `INSTALLED_APPS` **before(!)** `django.contrib.admin`:
+
+    ```python
+    INSTALLED_APPS = (
+        # ...
+        
+        # Brillixy app should go before django admin:
+        'brillixy',
+        
+        # Uncomment the next line to enable the admin:
+        'django.contrib.admin',
+
+        # ...
+    )
+    ```
+
+3. Add initialization code to ``urls.py`` right after Django admin autodiscover code:
+
+    ```python
+    # Uncomment the next two lines to enable the admin:
+    from django.contrib import admin
+    admin.autodiscover()
+
+    # Setup Brillixy
+    from brillixy import site as brillixy
+    brillixy.setup(admin.site)
+    ```
+
+4. Tada!
+
+See source code of an [Example project](https://github.com/05bit/brillixy/tree/master/example) for more details.
+
+## Contact
+
+Drop me a line to <rudy@05bit.com> if you have questions or want to say something :)
+</textarea>
+
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <footer class="container clearfix">
+        <div class="span12">
+            
+            &copy; 2012-2013 <a href="http://05bit.com">05Bit</a>
+            
+
+            
+        </div>
+    </footer>
+    
+</body>
+
+
+<script src="/assets/lib/jquery/slides.min.jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+    $("#slides").slides({
+        effect: 'fade',
+        play: 10000,
+        fadeSpeed: 600
+    });
+});
+</script>
+
+</html>

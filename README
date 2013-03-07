@@ -1,3 +1,13 @@
 # Hello!
 
 This is <http://05bit.com> site source powered by [Mynt](http://mynt.mirroredwhite.com/).
+
+# Run dev server
+
+For starting server on 8000 port run:
+
+    mynt serve -p 8000 .
+
+For watch & recompile on changes run:
+
+    mynt watch -f _site .
