@@ -1,3 +1,4 @@
 base_url: /
 posts_url: /<title>/
 assets_url: /assets
+pygmentize: True

@@ -1,5 +1,5 @@
 ---
-layout: post.html
+layout: post_noc.html
 title: Портфолио
 ---
 

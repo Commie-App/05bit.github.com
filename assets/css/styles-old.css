@@ -1,0 +1,170 @@
+/** (c) 2011 05BIT,
+    Alexey Kinyov
+    rudy@05bit.com
+*/
+body {
+    font-family: 'Georgia', serif;
+    }
+body, div, img, span {
+    border: none;
+    margin: 0;
+    padding: 0;
+    }
+a, a:visited {
+    text-decoration: none;
+    color: #00f;
+    }
+a:hover {
+    text-decoration: underline;
+    }
+h1, h2, h3 {
+    color: #999;
+    font-weight: normal;
+    }
+ul.no-bullets, ul.no-bullets li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+}
+.linenos { display: none; }
+.highlighttable .code .highlight { padding: 1px 5px 1px 5px; }
+
+#content header {
+    width: 600px;
+    }
+#content header .logo span {
+    font-family: 'Michroma', sans-serif;
+    font-size: 80px;
+    }
+    #content header .logo .lang {
+    box-shadow: 0px 0px 3px #ccc;
+    }
+#content header .motto {
+    margin-left: 122px;
+    font-size: 24pt;
+    font-style: italic;
+    color: #999;
+    }
+#content section {
+    margin-top: 60px;
+    margin-left: 242px;
+    }
+#content table.projects {
+    width: 100%;
+}
+    #content table.projects td {
+        padding: 10px 0px 10px 0px;
+        width: 50%;
+        font-size: 20px;
+        }
+
+#page-header {
+    margin-left: 120px;
+}
+
+/** Home page
+*/
+#home {
+    margin-top: 60px;
+}
+
+/** Team section
+*/
+h2.team {
+    margin-top: 60px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 3em;
+}
+#content section.team {
+    margin-left: 0;
+    margin-top: 0;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-shadow: inset 0px 0px 12px #ccc;
+    background-image: url(../patterns/gray_jean.png);
+}
+    #content section.team .members-list {
+        /*margin: 0 auto;*/
+        text-align: center;
+    }
+    #content section.team a.member {
+        display: inline-block;
+        margin-left: 40px;
+        margin-right: 40px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 2em;
+        color: #000;
+    }
+        #content section.team a.member .image {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 20px;
+            border-radius: 100px;
+            overflow: hidden;
+            box-shadow: inset 0px 0px 12px #555;
+            /*border: 1px solid #aaa;*/
+            background-size: 200px 200px;
+        }
+
+/** Technologies
+*/
+
+.techs {
+
+}
+    .techs a {
+        display: inline-block;
+        margin-right: 30px;
+        height: 75px;
+        /*margin-bottom: 20px;*/
+    }
+    .techs img {
+        max-width: 150px;
+        max-height: 75px;
+    }
+
+/** App widget
+*/
+.app_widget {
+
+}
+    .app_widget .image {
+        display: inline-block;
+        line-height: 0px;
+        box-shadow: 0px 0px 10px #aaa;
+        margin-right: 20px;
+    }
+    .app_widget .text {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+#post-header {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+    #post-header a, #post-header a:hover {
+        text-decoration: none;
+    }
+    #post-header span {
+        font-family: 'Michroma', sans-serif;
+        font-size: 24px;
+        color: #000;
+        }
+footer {
+    margin-top: 90px;
+    margin-bottom: 15px;
+    color: #999;
+    }
+footer a {
+    color: #999 !important;
+    text-decoration: none;
+    }

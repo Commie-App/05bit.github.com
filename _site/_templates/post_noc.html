@@ -20,14 +20,8 @@
     <!-- highlightjs -->
     <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css">
     <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
-    <!-- marked -->
-    <script src="{{ get_asset('lib/jquery/jquery-1.9.1.min.js') }}"></script>
-    <script src="{{ get_asset('lib/marked.js') }}"></script>
     <!-- styles -->
     <link href="{{ get_asset('css/styles.css') }}" rel='stylesheet' type='text/css' />
-    <!-- brillixy -->
-    <link href="{{ get_asset('css/brillixy.css') }}" rel='stylesheet' type='text/css' />
-    <script src="{{ get_asset('js/brillixy.js') }}"></script>
     {% block extra_meta %}{% endblock %}    
 </head>
 
@@ -42,11 +36,13 @@
 
     {% block content %}
     <div class="brillixy container clearfix">
-        <div class="span12">
-            <h1>{% block content_title %}{% endblock %}</h1>
+        <div class="span8">
+            <h1>{% block content_title %}{{ post.title }}{% endblock %}</h1>
             <div class="text">
-                {% block content_text %}{% endblock %}
+                {% block content_text %}{{ post.content }}{% endblock %}
             </div>
+
+            {% block comments %}{% endblock %}
         </div>
     </div>
     {% endblock %}

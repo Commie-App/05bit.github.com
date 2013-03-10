@@ -22,8 +22,8 @@
 
         <!-- Heading -->
         <section>
-            <h1 data-bind="visible: lang() == 'en'">Team of Python / Django developers</h1>
-            <h1 data-bind="visible: lang() == 'ru'">Команда Python / Django разработчиков</h1>
+            <h1 data-bind="visible: lang() == 'en'">Simpler and smarter web services</h1>
+            <h1 data-bind="visible: lang() == 'ru'">Ну вот, получше... получше... (с) Один зубной врач</h1>
 
             <p>
                 <span data-bind="visible: lang() == 'en'">We're based in Russian Federation &mdash; Moscow and St. Petersburg (GMT+4).</span>
@@ -37,8 +37,54 @@
 
         <hr>
 
-        <!-- Intro -->
+        <!-- News -->
         <section class="container container_12 clearfix">
+            <div class="grid_3">
+                <h2 data-bind="visible: lang() == 'ru'">Новости</h2>
+                <h2 data-bind="visible: lang() == 'en'">Blog posts</h2>
+            </div>
+            <div class="grid_6">
+                {#
+                <ul>
+                {% for post in posts %}
+                    {% if post.url.strip('/').split('-')[0].isdigit() %}
+                    <li>
+                        <small>{{ (post.timestamp|date('%d %B %Y')).lstrip('0') }}</small>
+                        <a href="{{ get_url(post.url) }}">{{ post.title }}</a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+                #}
+                </ul>
+                <div class="app_widget">
+                    <div class="image">
+                        <a href="{{ get_url('onephoto/') }}"><img src="{{ get_asset('img/onephoto.png') }}" width="200px"></a>
+                    </div>
+                    <div class="text">
+                        <h2>One Photo</h2>
+                        <p data-bind="visible: lang() == 'en'"><em>19 October 2012</em><br>
+                            New app One Photo v1.0<br> released! <a href="{{ get_url('onephoto/') }}">Read more &raquo;</a>
+                        </p>
+                        <p data-bind="visible: lang() == 'ru'"><em>19 октября 2012</em><br>
+                            Вышло приложение<br>One Photo! <a href="{{ get_url('onephoto/') }}">Подробнее &raquo;</a>
+                        </p>
+                        <p data-bind="visible: lang() == 'en'">
+                            <a href="https://itunes.apple.com/us/app/one-photo/id540976962" target="_blank">
+                                <img src="{{ get_asset('img/app_store_small.png') }}">
+                            </a>
+                        </p>
+                        <p data-bind="visible: lang() == 'ru'">
+                            <a href="https://itunes.apple.com/ru/app/one-photo/id540976962" target="_blank">
+                                <img src="{{ get_asset('img/app_store_small.png') }}">
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intro -->
+        <!--section class="container container_12 clearfix">
             <div class="grid_3">
                 <h2 data-bind="visible: lang() == 'en'">Intro</h2>
                 <h2 data-bind="visible: lang() == 'ru'">Интро</h2>
@@ -55,42 +101,7 @@
                     <a href="#projects">сайт</a> или <a href="#projects">серверную часть вашего продукта</a>.
                 </p>
             </div>
-        </section>
-
-        <!-- News -->
-        <section class="container container_12 clearfix">
-            <div class="grid_3">
-                <h2>Новости</h2>
-            </div>
-            <div class="grid_6 app_widget">
-                <div class="image">
-                    <a href="{{ get_url('onephoto/') }}"><img src="{{ get_asset('img/onephoto.png') }}" width="200px"></a>
-                </div>
-                <div class="text">
-                    <h2>One Photo</h2>
-                    <p data-bind="visible: lang() == 'en'"><em>19 October 2012</em><br>
-                        New app One Photo v1.0<br> released! <a href="{{ get_url('onephoto/') }}">Read more &raquo;</a>
-                    </p>
-                    <p data-bind="visible: lang() == 'ru'"><em>19 октября 2012</em><br>
-                        Вышло приложение<br>One Photo! <a href="{{ get_url('onephoto/') }}">Подробнее &raquo;</a>
-                    </p>
-                    <p data-bind="visible: lang() == 'en'">
-                        <a href="https://itunes.apple.com/us/app/one-photo/id540976962" target="_blank">
-                            <img src="{{ get_asset('img/app_store_small.png') }}">
-                        </a>
-                    </p>
-                    <p data-bind="visible: lang() == 'ru'">
-                        <a href="https://itunes.apple.com/ru/app/one-photo/id540976962" target="_blank">
-                            <img src="{{ get_asset('img/app_store_small.png') }}">
-                        </a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="grid_3">
-                <!-- <h2>News</h2> -->
-            </div>
-        </section>
+        </section-->
 
         <!-- Dreamteam -->
         <h2 class="team" data-bind="visible: lang() == 'en'">Our team</h2>
