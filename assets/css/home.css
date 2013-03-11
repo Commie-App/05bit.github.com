@@ -1,0 +1,101 @@
+/** (c) 2011-2013 05BIT,
+    Alexey Kinyov
+    rudy@05bit.com
+*/
+#home {
+    margin-top: 60px;
+}
+
+/** Header
+*/
+#home header .logo .text {
+    margin-top: 3em;
+}
+    #home header .logo .text span {
+        font-family: 'Michroma', sans-serif;
+        font-size: 3em;
+    }
+    #home header .logo .lang {
+        box-shadow: 0px 0px 3px #ccc;
+    }
+
+/** Sections
+*/
+#home #content > section {
+    margin-top: 45px;
+}
+
+/** Promo
+*/
+#home .promo {
+
+}
+
+/** Team
+*/
+#home h2.team {
+    /*margin-top: 60px;*/
+    margin-bottom: 0px;
+    /*text-align: center;*/
+    font-size: 1.0em;
+}
+#home #content section.team {
+    margin-left: 0;
+    margin-top: 0;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-shadow: inset 0px 0px 12px #ccc;
+    background-image: url(../patterns/gray_jean.png);
+}
+    #home section.team .members-list {
+        /*margin: 0 auto;*/
+        text-align: center;
+    }
+    #home section.team a.member {
+        display: inline-block;
+        margin-left: 40px;
+        margin-right: 40px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 2em;
+        color: #000;
+    }
+        #home section.team a.member .image {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 20px;
+            border-radius: 100px;
+            overflow: hidden;
+            box-shadow: inset 0px 0px 12px #555;
+            /*border: 1px solid #aaa;*/
+            background-size: 200px 200px;
+        }
+
+/** Technologies
+*/
+#home .techs {
+
+}
+    #home .techs a {
+        display: inline-block;
+        margin-right: 30px;
+        height: 75px;
+        /*margin-bottom: 20px;*/
+    }
+    #home .techs img {
+        max-width: 150px;
+        max-height: 75px;
+    }
+
+/** Projects
+*/
+#home table.projects {
+    width: 100%;
+}
+    #home table.projects td {
+        padding: 10px 0px 10px 0px;
+        width: 50%;
+        font-size: 20px;
+    }

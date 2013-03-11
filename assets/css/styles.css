@@ -1,9 +1,13 @@
-/** (c) 2011 05BIT,
+/** (c) 2011-2013 05BIT,
     Alexey Kinyov
     rudy@05bit.com
 */
 body {
+    font-family: 'Georgia', serif;
     font-size: 16px;
+    border: none;
+    margin: 0;
+    padding: 0;
 }
 h1, h2, h3 {
     color: #999;
@@ -40,7 +44,7 @@ header {
         font-family: 'Michroma', sans-serif;
         font-size: 24px;
         color: #000;
-        }
+    }
 
 /** Footer
 */

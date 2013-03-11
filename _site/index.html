@@ -3,107 +3,135 @@
 {% block extra_meta %}
     <meta name="keywords" content="development, python, django, iOS, iPhone, iPad, web services, mobile applications, mobile apps development, awareness development">
     <meta name="description" content="Cutting edge web development. Python / Django, Javascript / jQuery / KnockoutJS / Bootstrap. Разработка веб-сервисов.">
+
+    <link href="{{ get_asset('css/home.css') }}" rel='stylesheet' type='text/css' />
 {% endblock %}
 
 {% block content %}
 <div id="home">
     <div id="content">
         <!-- Logo -->
-        <header id="page-header">
-            <div class="logo">
-                <img src="{{ get_asset('img/logo.gif') }}" alt=":)" />
-                <span>05BIT</span>
-                <a href="#" data-bind="click: selectRUS"><img src="{{ get_asset('img/flag_RU.png') }}" class="lang"></a>
-                <a href="#" data-bind="click: selectENG"><img src="{{ get_asset('img/flag_US.png') }}" class="lang"></a>
+        <header id="page-header" class="container">
+            <div class="row logo">
+                <div class="span2 image">
+                    <img src="{{ get_asset('img/logo.gif') }}" alt=":)" />
+                </div>
+                <div class="span10 text">
+                    <span>05BIT</span>
+                    <a href="#" data-bind="click: selectRUS"><img src="{{ get_asset('img/flag_RU.png') }}" class="lang"></a>
+                    <a href="#" data-bind="click: selectENG"><img src="{{ get_asset('img/flag_US.png') }}" class="lang"></a>
+                </div>
             </div>
         </header>
 
         <!-- Heading -->
-        <section>
-            <h1 data-bind="visible: lang() == 'en'">Simpler and smarter web services</h1>
-            <h1 data-bind="visible: lang() == 'ru'">Ну вот, получше... получше... (с) Один зубной врач</h1>
+        <section class="container">
+            <div class="row">
+                <div class="span10 offset2">
+                    <h1 data-bind="visible: lang() == 'en'">Simpler and smarter web services</h1>
+                    <h1 data-bind="visible: lang() == 'ru'">Ну вот, получше... получше... (с) Один зубной врач</h1>
 
-            <p>
-                <span data-bind="visible: lang() == 'en'">We're based in Russian Federation &mdash; Moscow and St. Petersburg (GMT+4).</span>
-                <span data-bind="visible: lang() == 'ru'">Мы находимся в Москве и в Санкт-Петербурге.</span>                
-            </p>
+                    <p>
+                        <span data-bind="visible: lang() == 'en'">We're based in Russian Federation &mdash; Moscow and St. Petersburg (GMT+4).</span>
+                        <span data-bind="visible: lang() == 'ru'">Мы находимся в Москве и в Санкт-Петербурге.</span>                
+                    </p>
 
-            <p>
-                E-mail: <a href="mailto:contact@05bit.com">contact@05bit.com</a>
-            </p>
+                    <p>
+                        E-mail: <a href="mailto:contact@05bit.com">contact@05bit.com</a>
+                    </p>
+                </div>
+            </div>
         </section>
 
-        <hr>
+        <!-- Brillixy -->
+        <div class="promo">
+            <section class="container">
+                <div class="row">
+                    <div class="span8">
+                        <div id="slides">
+                            <div class="slides_container">
+                                <div>
+                                    <img src="{{ get_asset('img/brillixy_1.png') }}">
+                                </div>
+                                <div>
+                                    <img src="{{ get_asset('img/brillixy_2.png') }}">
+                                </div>
+                                <div>
+                                    <img src="{{ get_asset('img/brillixy_3.png') }}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <h2>Brillixy (beta)</h2>
+                        <p>
+                            Meet new skin & customizations kit for Django framework admin interface.
+                        </p>
+
+                        <p>
+                            &mdash; FREE fro NON-commercial usage<br>
+                            &mdash; $25 for single developer commercial license
+                        </p>
+
+                        <a href="{{ get_url('brillixy/') }}" class="btn btn-large">Get more details &rarr;</a>
+                    </div>
+                </div>
+            </section>
+        </div>
 
         <!-- News -->
-        <section class="container container_12 clearfix">
-            <div class="grid_3">
-                <h2 data-bind="visible: lang() == 'ru'">Новости</h2>
-                <h2 data-bind="visible: lang() == 'en'">Blog posts</h2>
-            </div>
-            <div class="grid_6">
-                {#
-                <ul>
-                {% for post in posts %}
-                    {% if post.url.strip('/').split('-')[0].isdigit() %}
-                    <li>
-                        <small>{{ (post.timestamp|date('%d %B %Y')).lstrip('0') }}</small>
-                        <a href="{{ get_url(post.url) }}">{{ post.title }}</a>
-                    </li>
-                    {% endif %}
-                {% endfor %}
-                #}
-                </ul>
-                <div class="app_widget">
-                    <div class="image">
-                        <a href="{{ get_url('onephoto/') }}"><img src="{{ get_asset('img/onephoto.png') }}" width="200px"></a>
-                    </div>
-                    <div class="text">
-                        <h2>One Photo</h2>
-                        <p data-bind="visible: lang() == 'en'"><em>19 October 2012</em><br>
-                            New app One Photo v1.0<br> released! <a href="{{ get_url('onephoto/') }}">Read more &raquo;</a>
-                        </p>
-                        <p data-bind="visible: lang() == 'ru'"><em>19 октября 2012</em><br>
-                            Вышло приложение<br>One Photo! <a href="{{ get_url('onephoto/') }}">Подробнее &raquo;</a>
-                        </p>
-                        <p data-bind="visible: lang() == 'en'">
-                            <a href="https://itunes.apple.com/us/app/one-photo/id540976962" target="_blank">
-                                <img src="{{ get_asset('img/app_store_small.png') }}">
-                            </a>
-                        </p>
-                        <p data-bind="visible: lang() == 'ru'">
-                            <a href="https://itunes.apple.com/ru/app/one-photo/id540976962" target="_blank">
-                                <img src="{{ get_asset('img/app_store_small.png') }}">
-                            </a>
-                        </p>
+        <section class="container">
+            <div class="row">
+                <div class="span3 offset2">
+                    <h2 data-bind="visible: lang() == 'ru'">Новости</h2>
+                    <h2 data-bind="visible: lang() == 'en'">Blog posts</h2>
+                </div>
+                <div class="span7">
+                    {#
+                    <ul>
+                    {% for post in posts %}
+                        {% if post.url.strip('/').split('-')[0].isdigit() %}
+                        <li>
+                            <small>{{ (post.timestamp|date('%d %B %Y')).lstrip('0') }}</small>
+                            <a href="{{ get_url(post.url) }}">{{ post.title }}</a>
+                        </li>
+                        {% endif %}
+                    {% endfor %}
+                    </ul>
+                    #}
+                    <div class="row">
+                        <div class="span3 image">
+                            <a href="{{ get_url('onephoto/') }}"><img src="{{ get_asset('img/onephoto.png') }}" width="200px" class="img-polaroid"></a>
+                        </div>
+                        <div class="span4 text">
+                            <h2>One Photo</h2>
+                            <p data-bind="visible: lang() == 'en'"><em>19 October 2012</em><br>
+                                New app One Photo v1.0<br> released! <a href="{{ get_url('onephoto/') }}">Read more &raquo;</a>
+                            </p>
+                            <p data-bind="visible: lang() == 'ru'"><em>19 октября 2012</em><br>
+                                Вышло приложение<br>One Photo! <a href="{{ get_url('onephoto/') }}">Подробнее &raquo;</a>
+                            </p>
+                            <p data-bind="visible: lang() == 'en'">
+                                <a href="https://itunes.apple.com/us/app/one-photo/id540976962" target="_blank">
+                                    <img src="{{ get_asset('img/app_store_small.png') }}">
+                                </a>
+                            </p>
+                            <p data-bind="visible: lang() == 'ru'">
+                                <a href="https://itunes.apple.com/ru/app/one-photo/id540976962" target="_blank">
+                                    <img src="{{ get_asset('img/app_store_small.png') }}">
+                                </a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Intro -->
-        <!--section class="container container_12 clearfix">
-            <div class="grid_3">
-                <h2 data-bind="visible: lang() == 'en'">Intro</h2>
-                <h2 data-bind="visible: lang() == 'ru'">Интро</h2>
-            </div>
-            <div class="grid_9">
-                <p data-bind="visible: lang() == 'en'">
-                    We do programming.<br>
-                    We can develop complex or simple<br>
-                    <a href="#projects">web service</a>, <a href="#projects">site</a> or <a href="#projects">server-side</a> for you.
-                </p>
-                <p data-bind="visible: lang() == 'ru'">
-                    Мы занимаемся программированием.<br>
-                    Мы готовы разработать для вас <a href="#projects">веб-сервис</a>,<br>
-                    <a href="#projects">сайт</a> или <a href="#projects">серверную часть вашего продукта</a>.
-                </p>
-            </div>
-        </section-->
-
         <!-- Dreamteam -->
-        <h2 class="team" data-bind="visible: lang() == 'en'">Our team</h2>
-        <h2 class="team" data-bind="visible: lang() == 'ru'">Команда</h2>
+        <section class="container">
+            <h2 class="team" data-bind="visible: lang() == 'en'"># Meet our team</h2>
+            <h2 class="team" data-bind="visible: lang() == 'ru'"># Наша команда</h2>
+        </section>
         <section class="team clearfix">
             <div class="members-list">
                 <a class="member" href="{{ get_url('rudyryk/') }}">
@@ -124,110 +152,122 @@
         </section>
 
         <!-- Technologies -->
-        <section class="container container_12 clearfix">
-            <div class="grid_3">
-                <h2 data-bind="visible: lang() == 'en'">Technologies<br>we use</h2>
-                <h2 data-bind="visible: lang() == 'ru'">Используемые<br>технологии</h2>
-            </div>
+        <section class="container techs">
+            <div class="row">
+                <div class="span3 offset2">
+                    <h2 data-bind="visible: lang() == 'en'">Technologies<br>we use</h2>
+                    <h2 data-bind="visible: lang() == 'ru'">Используемые<br>технологии</h2>
+                </div>
 
-            <div class="grid_9 techs">
-                <a href="http://python.org" target="_blank"><img src="{{ get_asset('img/logo-python.png') }}"></a>
+                <div class="span7">
+                    <a href="http://python.org" target="_blank"><img src="{{ get_asset('img/logo-python.png') }}"></a>
 
-                <a href="http://djangoproject.com" target="_blank"><img src="{{ get_asset('img/logo-django.png') }}"></a>
+                    <a href="http://djangoproject.com" target="_blank"><img src="{{ get_asset('img/logo-django.png') }}"></a>
 
-                <a href="http://www.html5rocks.com" target="_blank"><img src="{{ get_asset('img/logo-html5.png') }}"></a>
+                    <a href="http://www.html5rocks.com" target="_blank"><img src="{{ get_asset('img/logo-html5.png') }}"></a>
 
-                <a href="http://jquery.org" target="_blank"><img src="{{ get_asset('img/logo-jquery.png') }}"></a>
+                    <a href="http://jquery.org" target="_blank"><img src="{{ get_asset('img/logo-jquery.png') }}"></a>
 
-                <a href="http://redis.io" target="_blank"><img src="{{ get_asset('img/logo-redis.png') }}"></a>
+                    <a href="http://redis.io" target="_blank"><img src="{{ get_asset('img/logo-redis.png') }}"></a>
 
-                <a href="http://www.postgresql.org" target="_blank"><img src="{{ get_asset('img/logo-postgresql.png') }}"></a>
+                    <a href="http://www.postgresql.org" target="_blank"><img src="{{ get_asset('img/logo-postgresql.png') }}"></a>
 
-                <a href="http://knockoutjs.com" target="_blank"><img src="{{ get_asset('img/logo-knockoutjs.png') }}"></a>
+                    <a href="http://knockoutjs.com" target="_blank"><img src="{{ get_asset('img/logo-knockoutjs.png') }}"></a>
 
-                <a href="http://sendgrid.com" target="_blank"><img src="{{ get_asset('img/logo-sendgrid.jpg') }}"></a>
+                    <a href="http://sendgrid.com" target="_blank"><img src="{{ get_asset('img/logo-sendgrid.jpg') }}"></a>
 
-                <a href="http://aws.amazon.com" target="_blank"><img src="{{ get_asset('img/logo-aws.png') }}"></a>
+                    <a href="http://aws.amazon.com" target="_blank"><img src="{{ get_asset('img/logo-aws.png') }}"></a>
 
-                <a href="http://aws.amazon.com" target="_blank"><img src="{{ get_asset('img/logo-ubuntu.png') }}"></a>
+                    <a href="http://aws.amazon.com" target="_blank"><img src="{{ get_asset('img/logo-ubuntu.png') }}"></a>
 
-                <p data-bind="visible: lang() == 'en'">Having such perfect technologies and experienced team
-                <br>we can create complex projects really fast.</p>
+                    <p data-bind="visible: lang() == 'en'">Having such perfect technologies and experienced team
+                    <br>we can create complex projects really fast.</p>
 
-                <p data-bind="visible: lang() == 'ru'">Имея в распоряжении такие прекрасные технологии, мы можем<br>
-                    создавать продукты быстро, качественно и с удовольствием.</p>
-
+                    <p data-bind="visible: lang() == 'ru'">Имея в распоряжении такие прекрасные технологии, мы можем<br>
+                        создавать продукты быстро, качественно и с удовольствием.</p>
+                </div>
             </div>
         </section>
 
         <!-- Projects -->
-        <section>
-            <h2 data-bind="visible: lang() == 'en'">Featured Projects</h2>
-            <h2 data-bind="visible: lang() == 'ru'">Проекты</h2>
+        <section class="container">
+            <a name="projects"></a>
+            <div class="row">
+                <div class="span10 offset2">
+                    <h2 data-bind="visible: lang() == 'en'">Featured Projects</h2>
+                    <h2 data-bind="visible: lang() == 'ru'">Проекты</h2>
 
-            <table class="projects">
-                <!--tr data-bind="visible: lang() == 'ru'">
-                    <td><a href="http://www.darimvmeste.ru" target="_blank">Дарим Вместе</a></td>
-                    <td>&nbsp;</td>
-                </tr-->
-                <tr>
-                    <td><a href="http://www.gallerza.com" target="_blank">Gallerza</a></td>
-                    <td><a href="http://www.qmazi.com" target="_blank">Qmazi</a></td>
-                </tr>
-                <tr data-bind="visible: lang() == 'en'">
-                    <td><a href="http://www.ikucha.ru" target="_blank">iKucha</a></td>
-                    <td><a href="http://itunes.apple.com/us/app/how-mouse-played-ball-book/id483558719" target="_blank">How the Mouse Played <br> with the Ball</a></td>
-                </tr>
-                <tr data-bind="visible: lang() == 'ru'">
-                    <td><a href="http://www.ikucha.ru" target="_blank">iКуча</a></td>
-                    <td><a href="http://itunes.apple.com/ru/app/how-mouse-played-ball-book/id483558719" target="_blank">Как мышка <br> играла в мячик</a></td>
-                </tr>
-            </table>
+                    <table class="projects">
+                        <!--tr data-bind="visible: lang() == 'ru'">
+                            <td><a href="http://www.darimvmeste.ru" target="_blank">Дарим Вместе</a></td>
+                            <td>&nbsp;</td>
+                        </tr-->
+                        <tr>
+                            <td><a href="http://www.gallerza.com" target="_blank">Gallerza</a></td>
+                            <td><a href="http://www.qmazi.com" target="_blank">Qmazi</a></td>
+                        </tr>
+                        <tr data-bind="visible: lang() == 'en'">
+                            <td><a href="http://www.ikucha.ru" target="_blank">iKucha</a></td>
+                            <td><a href="http://itunes.apple.com/us/app/how-mouse-played-ball-book/id483558719" target="_blank">How the Mouse Played <br> with the Ball</a></td>
+                        </tr>
+                        <tr data-bind="visible: lang() == 'ru'">
+                            <td><a href="http://www.ikucha.ru" target="_blank">iКуча</a></td>
+                            <td><a href="http://itunes.apple.com/ru/app/how-mouse-played-ball-book/id483558719" target="_blank">Как мышка <br> играла в мячик</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </section>
 
         <!-- Resources -->
-        <section>
-            <a name="projects"></a>
-            <table class="projects">
-                <tr>
-                    <td>
-                        <h3 data-bind="visible: lang() == 'ru'">Наши ресурсы</h3>
-                        <h3 data-bind="visible: lang() == 'en'">Open source</h3>
-                    </td>
-                    <td>
-                        <h3 data-bind="visible: lang() == 'ru'">Блоги</h3>
-                        <h3 data-bind="visible: lang() == 'en'">Blogs</h3>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="https://github.com/organizations/05bit" target="_blank">05Bit @ GutHub</a>
-                    </td>
+        <section class="container">
+            <div class="row">
+                <div class="span10 offset2">
+                    <table class="projects">
+                        <tr>
+                            <td>
+                                <h3 data-bind="visible: lang() == 'ru'">Наши ресурсы</h3>
+                                <h3 data-bind="visible: lang() == 'en'">Open source</h3>
+                            </td>
+                            <td>
+                                <h3 data-bind="visible: lang() == 'ru'">Блоги</h3>
+                                <h3 data-bind="visible: lang() == 'en'">Blogs</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/organizations/05bit" target="_blank">05Bit @ GutHub</a>
+                            </td>
 
-                    <td><a href="http://05bit.qmazi.com" target="_blank">05Bit @ Qmazi</a> </td>
-                </tr>
-                <tr>
-                    <td><a href="https://bitbucket.org/05bit" target="_blank">05Bit @ Bitbucket</a>
-                    </td>
-                    <td>
-                        <a href="http://uvavu.ru/" target="_blank">Uvavu.ru</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>
-                        <a href="http://kiss-of-life.posterous.com/" target="_blank">Kiss Of Life</a>
-                    </td>
-                </tr>
+                            <td><a href="http://05bit.qmazi.com" target="_blank">05Bit @ Qmazi</a> </td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://bitbucket.org/05bit" target="_blank">05Bit @ Bitbucket</a>
+                            </td>
+                            <td>
+                                <a href="http://uvavu.ru/" target="_blank">Uvavu.ru</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>
+                                <a href="http://kiss-of-life.posterous.com/" target="_blank">Kiss Of Life</a>
+                            </td>
+                        </tr>
 
-            </table>
-
+                    </table>
+                </div>
+            </div>
         </section>
 
         <!-- Finally -->
-        <section>
-            <h2 data-bind="visible: lang() == 'en'">Have a question?</h2>
-            <h2 data-bind="visible: lang() == 'ru'">Есть вопросы?</h2>
-            <p>E-mail: <a href="mailto:contact@05bit.com">contact@05bit.com</a></p>
+        <section class="container">
+            <div class="row">
+                <div class="span10 offset2">
+                    <h2 data-bind="visible: lang() == 'en'">Have a question?</h2>
+                    <h2 data-bind="visible: lang() == 'ru'">Есть вопросы?</h2>
+                    <p>E-mail us <a href="mailto:contact@05bit.com">contact@05bit.com</a></p>
+                </div>
+            </div>
         </section>
     </div>
 </div>
@@ -235,44 +275,53 @@
 {% endblock %}
 
 {% block extra_js %}
-    <script type="text/javascript" src="{{ get_asset('js/knockout-2.0.0.js') }}"></script>
+<script src="{{ get_asset('lib/knockout-2.0.0.js') }}"></script>
+<script src="{{ get_asset('lib/jquery/slides.min.jquery.js') }}"></script>
 
-    <script type="text/javascript">
-        var view = {
-            lang: ko.observable('en'),
+<script type="text/javascript">
+    var view = {
+        lang: ko.observable('en'),
 
-            updateLang: function(newlang) {
-                if (!newlang) {
-                    if (window.location.hash) {
-                        newlang = window.location.hash.substring(1);
-                    } else {
-                        newlang = view.lang();
-                    }
+        updateLang: function(newlang) {
+            if (!newlang) {
+                if (window.location.hash) {
+                    newlang = window.location.hash.substring(1);
+                } else {
+                    newlang = view.lang();
                 }
-
-                view.lang(newlang);
-                window.location.hash = '#' + newlang;
-            },
-
-            selectRUS: function() {
-                view.updateLang('ru');
-            },
-
-            selectENG: function() {
-                view.updateLang('en');
             }
-        }
 
-        // set default language by browser setting
-        if (navigator.language) {
-            if (navigator.language.indexOf('ru') >= 0) {
-                view.lang('ru');
-            } else if (navigator.language.indexOf('en') >= 0) {
-                view.lang('en');
-            }
-        }
+            view.lang(newlang);
+            window.location.hash = '#' + newlang;
+        },
 
-        ko.applyBindings(view);
-        view.updateLang();
-    </script>
+        selectRUS: function() {
+            view.updateLang('ru');
+        },
+
+        selectENG: function() {
+            view.updateLang('en');
+        }
+    }
+
+    // set default language by browser setting
+    if (navigator.language) {
+        if (navigator.language.indexOf('ru') >= 0) {
+            view.lang('ru');
+        } else if (navigator.language.indexOf('en') >= 0) {
+            view.lang('en');
+        }
+    }
+
+    ko.applyBindings(view);
+    view.updateLang();
+
+    $(function(){
+        $("#slides").slides({
+            effect: 'fade',
+            play: 10000,
+            fadeSpeed: 600
+        });
+    });
+</script>
 {% endblock %}

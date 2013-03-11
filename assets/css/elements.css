@@ -1,46 +1,38 @@
-/** (c) 2011 05BIT,
+/** (c) 2011-2013 05BIT,
     Alexey Kinyov
     rudy@05bit.com
 */
 
-/** Overview
+/** Promo block
 */
-#get-link {
-    text-align: center;
+.promo {
+    margin-left: 0;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-shadow: inset 0px 0px 12px #ccc;
+    background-image: url(../patterns/gray_jean.png);
 }
-
-/** Slides
-*/
-#slides {
-    /*background-color: #ccc;*/
-}
-.slides_container {
-    background-color: #eee;
-    box-shadow: 1px 1px 3px #eee;
-    padding: 1px;
-    width: 600px;
-    height: 313px;
-    margin: 0 auto;
-}
-    .slides_container div {
-        width: 600px;
-        height: 313px;
-        display: block;
+    .promo .slides_container {
+        height: 315px;
+    }
+    .promo .slides_container img {
+        border: 1px solid #ccc;
     }
 
+/** Slider navigation
+*/
 .pagination {
     display: block;
     margin: 6px auto 0;
     padding: 0;
     list-style: none;
     height: 30px;
-    width: 48px;
 }
     .pagination li {
         float: left;
-        margin: 0;/* 1px;*/
-        width: 16px;
-        /*display: block;*/
+        margin: 0;
     }
     .pagination li a {
         display: block;
