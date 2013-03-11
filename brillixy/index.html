@@ -20,15 +20,16 @@
     <!-- highlightjs -->
     <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css">
     <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
-    <!-- marked -->
-    <script src="/assets/lib/jquery/jquery-1.9.1.min.js"></script>
-    <script src="/assets/lib/marked.js"></script>
     <!-- styles -->
     <link href="/assets/css/styles.css" rel='stylesheet' type='text/css' />
+    
+    <!-- libs -->
+    <script src="/assets/lib/jquery/jquery-1.9.1.min.js"></script>
+    <script src="/assets/lib/marked.js"></script>
     <!-- brillixy -->
     <link href="/assets/css/brillixy.css" rel='stylesheet' type='text/css' />
     <script src="/assets/js/brillixy.js"></script>
-        
+    
 </head>
 
 <body>
@@ -71,23 +72,24 @@ Brillixy &mdash; <small>nifty Django admin interface</small>
 </div>
 <hr>
 
-<textarea class="marked">
-## Overview & Features
+<div class="span8"><textarea class="marked">
+## Features
 
- * Responsive layout powered by [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
- * Original admin features supported: inlines, widgets, etc.
+ * Minimalistic responsive layout powered by [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
+ * Working with Django 1.4.x/1.5
+ * Original admin features are supported: inlines, widgets, filters, actions etc.
  * Header logo & title can be changed easily
  * Customizable dashboard panels 
 
 
-## <a name="pricing"></a>Pricing & License
+## <a name="pricing"></a>Pricing
 
  * FREE for NON-commercial  
  <small>Brillixy is licensed under a Creative Commons  
     Attribution-NonCommercial 3.0 Unported License  
     http://creativecommons.org/licenses/by-nc/3.0/</small>
 
- * **25$** for single developer commercial license  
+ * **25$** commercial license for single developer  
 
      + 30-day moneyback
      + Updates forever for free
@@ -106,55 +108,53 @@ Brillixy &mdash; <small>nifty Django admin interface</small>
     <small>2CheckOut.com Inc. (Ohio, USA) is a payment facilitator for goods<br>
         and services provided by Kinev Alexey Vadimovich.</small>
 
+    ### Refund Policy
 
-## Installation & Docs
+    If you are not 100% satisfied with your purchase, within 30 days from the purchase date, we will fully refund the cost of your order.
 
-1. Install using `pip`:
+    ### Privacy Policy
+    This policy covers how we use your personal information. We take your privacy seriously and will take all measures to protect your personal information.
 
-    ```
-    pip install brillixy
-    ```
+    Any personal information received will only be used to fill your order. We will not sell or redistribute your information to anyone.
 
-    or get source from GitHub https://github.com/05bit/brillixy
 
-2. Add `brillixy` to `INSTALLED_APPS` **before(!)** `django.contrib.admin`:
+## Installation
 
-    ```python
-    INSTALLED_APPS = (
-        # ...
-        
-        # Brillixy app should go before django admin:
-        'brillixy',
-        
-        # Uncomment the next line to enable the admin:
-        'django.contrib.admin',
+Installation process is generic and straightforward. Please, follow quick installation guide and see an `example` project for more details.
 
-        # ...
-    )
-    ```
+<a href="https://github.com/05bit/brillixy" target="_blank" class="btn btn-large">Installation & docs &rarr;</a>
 
-3. Add initialization code to ``urls.py`` right after Django admin autodiscover code:
 
-    ```python
-    # Uncomment the next two lines to enable the admin:
-    from django.contrib import admin
-    admin.autodiscover()
+## Contacts & support
 
-    # Setup Brillixy
-    from brillixy import site as brillixy
-    brillixy.setup(admin.site)
-    ```
+Drop me a line to <rudy@05bit.com> if you have any questions or wish to give a feedback! Thank you.
 
-4. Tada!
+## Authors
 
-See source code of an [Example project](https://github.com/05bit/brillixy/tree/master/example) for more details.
+<table border="0" width="100%">
+    <tr>
+        <td width="30%">
+            <img src="/assets/img/alex.png" alt="Alexey Kinyov | rudyryk">
+        </td>
+        <td>
+            <p>
+                <strong>Alexey Kinyov</strong><br>
+                <a href="http://05bit.com/rudyryk/">http://05bit.com/rudyryk/</a>
+            </p>
+            <p>
+                <blockquote>
+                    Hi! I've build Brillixy as a 'less hardcore but simple' admin interface for Django sites. Its interface may seem extremely minimalistic to you. Yes, it is! :)
+                </blockquote>
+            </p>
+        </td>
+    </tr>
+</table>
 
-## Contact
-
-Drop me a line to <rudy@05bit.com> if you have questions or want to say something :)
-</textarea>
+</textarea></div>
 
             </div>
+
+            
         </div>
     </div>
     
@@ -170,9 +170,8 @@ Drop me a line to <rudy@05bit.com> if you have questions or want to say somethin
         </div>
     </footer>
     
-</body>
 
-
+    
 <script src="/assets/lib/jquery/slides.min.jquery.js"></script>
 <script type="text/javascript">
 $(function(){
@@ -184,4 +183,19 @@ $(function(){
 });
 </script>
 
+
+    
+    <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-12201376-5']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+    
+</body>
 </html>

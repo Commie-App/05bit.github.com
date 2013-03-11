@@ -39,7 +39,11 @@
         </div>
     </footer>
     {% endblock %}
-</body>
 
-{% block extra_js %}{% endblock %}
+    {% block extra_js %}{% endblock %}
+
+    {% block counters %}
+    {% include "_counters.html" %}
+    {% endblock %}
+</body>
 </html>

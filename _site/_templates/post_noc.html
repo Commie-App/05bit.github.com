@@ -36,7 +36,7 @@
 
     {% block content %}
     <div class="brillixy container clearfix">
-        <div class="span8">
+        <div {% block content_class %}class="span8"{% endblock %}>
             <h1>{% block content_title %}{{ post.title }}{% endblock %}</h1>
             <div class="text">
                 {% block content_text %}{{ post.content }}{% endblock %}
@@ -58,7 +58,11 @@
         </div>
     </footer>
     {% endblock %}
-</body>
 
-{% block extra_js %}{% endblock %}
+    {% block extra_js %}{% endblock %}
+
+    {% block counters %}
+    {% include "_counters.html" %}
+    {% endblock %}
+</body>
 </html>
