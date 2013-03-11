@@ -5,8 +5,8 @@
 {% block content_class %}class="span12"{% endblock %}
 
 {% block extra_meta %}
-    <!-- libs -->
-    <script src="{{ get_asset('lib/jquery/jquery-1.9.1.min.js') }}"></script>
+    {{ super() }}
+    <!-- libs - marked -->
     <script src="{{ get_asset('lib/marked.js') }}"></script>
     <!-- brillixy -->
     <link href="{{ get_asset('css/brillixy.css') }}" rel='stylesheet' type='text/css' />

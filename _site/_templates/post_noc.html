@@ -1,68 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="utf-8">
-    <title>{% block title %}Brillixy - 05Bit{% endblock %}</title>
-
-    <link rel="icon" type="image/png" href="{{ get_asset('favicon.png') }}" />
-    <link href='http://fonts.googleapis.com/css?family=Michroma' rel='stylesheet' type='text/css' />
-
-    <!--[if lt IE 9]>
-        <script src="{{ get_asset('lib/html5.js') }}"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-        <link rel="icon" type="image/gif" href="{{ get_asset('favicon.gif') }}" />
-    <![endif]-->
-
-    <!-- bootstrap -->
-    <link href="{{ get_asset('lib/bootstrap/bootstrap.min.css') }}" rel='stylesheet' type='text/css' />
-    <!-- highlightjs -->
+{% block extra_meta %}
+    {{ super() }}
+    <!-- libs - highlightjs -->
     <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css">
     <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
-    <!-- styles -->
-    <link href="{{ get_asset('css/styles.css') }}" rel='stylesheet' type='text/css' />
-    {% block extra_meta %}{% endblock %}    
-</head>
+{% endblock %}
 
-<body>
-    {% block header %}
-    <header class="container">
-        <div class="span12">
-            <a href="{{ get_url('') }}"><img src="{{ get_asset('img/logo.gif') }}" width="36px"> <span>05BIT</span></a>
-        </div>
-    </header>
-    {% endblock %}
-
-    {% block content %}
-    <div class="brillixy container clearfix">
-        <div {% block content_class %}class="span8"{% endblock %}>
-            <h1>{% block content_title %}{{ post.title }}{% endblock %}</h1>
-            <div class="text">
-                {% block content_text %}{{ post.content }}{% endblock %}
-            </div>
-
-            {% block comments %}{% endblock %}
-        </div>
+{% block header %}
+<header class="container">
+    <div class="span12">
+        <a href="{{ get_url('') }}"><img src="{{ get_asset('img/logo.gif') }}" width="36px"> <span>05BIT</span></a>
     </div>
-    {% endblock %}
+</header>
+{% endblock %}
 
-    {% block footer %}
-    <footer class="container clearfix">
-        <div class="span12">
-            {% block footer_copy %}
-            &copy; 2012-2013 <a href="http://05bit.com">05Bit</a>
-            {% endblock %}
-
-            {% block footer_attribute %}{% endblock %}
+{% block content %}
+<div class="brillixy container clearfix">
+    <div {% block content_class %}class="span8"{% endblock %}>
+        <h1>{% block content_title %}{{ post.title }}{% endblock %}</h1>
+        <div class="text">
+            {% block content_text %}{{ post.content }}{% endblock %}
         </div>
-    </footer>
-    {% endblock %}
 
-    {% block extra_js %}{% endblock %}
-
-    {% block counters %}
-    {% include "_counters.html" %}
-    {% endblock %}
-</body>
-</html>
+        {% block comments %}{% endblock %}
+    </div>
+</div>
+{% endblock %}
