@@ -17,6 +17,7 @@
     <!-- libs -->
     <link href='http://fonts.googleapis.com/css?family=Michroma' rel='stylesheet' type='text/css' />
     <link href="/assets/lib/bootstrap/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <link href="/assets/lib/awesome/css/font-awesome.min.css" rel='stylesheet' type='text/css' />
     <link href="/assets/lib/pygments/monokai.css" rel='stylesheet' type='text/css' />
     <script src="/assets/lib/jquery/jquery-1.9.1.min.js"></script>
     <!-- site -->
@@ -71,15 +72,19 @@ Brillixy &mdash; <small>nifty Django admin interface</small>
     </div>
 
     <div id="get-link">
-        <a href="#pricing" class="btn btn-large">Get Brillixy</a>
-        <!-- <a href="#demo" class="btn btn-success" target="_blank">Launch demo &rarr;</a> -->
+        <span><a href="#pricing" class="btn btn-large btn-success"><i class="icon-ok"></i> Get Brillixy</a></span>
+
+        <span><a href="http://brillixy.com/admin/" class="btn" target="_blank"><i class="icon-play"></i> View live demo</a><br><small>Use '<strong>demo</strong>' for login <br> and password.</small>
+        </span>
+
+        <span><a href="https://github.com/05bit/brillixy" class="btn" target="_blank"><i class="icon-github icon-large"></i> Brillixy at GitHub</a></span>
     </div>
 </div>
 <hr>
 
 <div class="span8"><textarea class="marked">
 
-<div class="alert alert-danger">Brillixy is currently in <strong>beta</strong>. Latest build is 0.6a from 2013 Mar 02.</div>
+<div class="alert alert-danger">Brillixy is currently in <strong>alpha</strong>. Latest build is 0.6 from 2013 Mar 12.</div>
 
 ## Features
 
@@ -104,33 +109,50 @@ Brillixy &mdash; <small>nifty Django admin interface</small>
      + Support on "best effort" basis
      + Integration with unlimited number of commercial sites
 
-    <form action='https://www.2checkout.com/checkout/purchase' method='post' target="_blank">
+<table width="100%" id="buy-links">
+    <tr>
+        <td class="paypal">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="W6LN55PVCD4EQ">
+        <input type="image" src="https://www.paypalobjects.com/en_US/RU/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+
+        using PayPal
+        </td>
+
+        <td>or</td>
+
+        <td>
+        <form action='https://www.2checkout.com/checkout/purchase' method='post' target="_blank">
         <p>
-            <input type='hidden' name='sid' value='1948938'>
-            <input type='hidden' name='quantity' value='1'>
-            <input type='hidden' name='product_id' value='1'>
-            <input name='submit' type='submit' value='Buy from 2CO &rarr;' class="btn btn-primary btn-large">
+        <input type='hidden' name='sid' value='1948938'>
+        <input type='hidden' name='quantity' value='1'>
+        <input type='hidden' name='product_id' value='1'>
+        <input name='submit' type='submit' value='Buy from 2CO &rarr;' class="btn btn-primary btn-large">
         </p>
-    </form>
+        </form>
 
-    <small>2CheckOut.com Inc. (Ohio, USA) is a payment facilitator for goods<br>
-        and services provided by Kinev Alexey Vadimovich.</small>
+        <small>2CheckOut.com Inc. (Ohio, USA) is a payment facilitator for goods
+            and services provided by Kinev Alexey Vadimovich.</small>
+        </td>
+    </tr>
+</table>
 
-    ### Refund Policy
+#### Refund Policy
 
-    If you are not 100% satisfied with your purchase, within 30 days from the purchase date, we will fully refund the cost of your order.
+If you are not 100% satisfied with your purchase, within 30 days from the purchase date, we will fully refund the cost of your order.
 
-    ### Privacy Policy
-    This policy covers how we use your personal information. We take your privacy seriously and will take all measures to protect your personal information.
+#### Privacy Policy
+This policy covers how we use your personal information. We take your privacy seriously and will take all measures to protect your personal information.
 
-    Any personal information received will only be used to fill your order. We will not sell or redistribute your information to anyone.
+Any personal information received will only be used to fill your order. We will not sell or redistribute your information to anyone.
 
 
 ## Installation
 
-Installation process is generic and straightforward. Please, follow installation guide and see an `example` project for more details.
-
-<a href="https://github.com/05bit/brillixy" target="_blank" class="btn btn-large">Installation & docs &rarr;</a>
+Installation process is generic and straightforward. Please, follow installation guide and see an `example` project for more details: <a href="https://github.com/05bit/brillixy#installation" target="_blank">https://github.com/05bit/brillixy</a>
 
 
 ## Contacts & support

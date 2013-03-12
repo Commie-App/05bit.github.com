@@ -3,11 +3,37 @@
     rudy@05bit.com
 */
 
+h2 {
+    border-bottom: 1px solid #eee;
+}
+
 /** Overview
 */
 #get-link {
     text-align: center;
 }
+    #get-link span {
+        display: inline-block;
+        vertical-align: top;
+        text-align: left;
+        padding: 0 1.5em 0 1.5em;
+    }
+    #get-link i {
+        margin-right: 5px;
+    }
+
+#buy-links {
+    border: 1px dashed #ccc;
+    margin: 1.5em 0 1.5em 0;
+}
+    #buy-links td {
+        padding: 1em;
+        vertical-align: middle;
+    }
+    #buy-links td.paypal {
+        text-align: center;
+        width: 40%;
+    }
 
 /** Slides
 */
