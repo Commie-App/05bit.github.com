@@ -55,16 +55,16 @@
         <section class="container">
             <div class="row">
                 <div class="span10 offset2">
-                    <h1 data-bind="visible: lang() == 'en'">Simpler and smarter web services</h1>
-                    <h1 data-bind="visible: lang() == 'ru'">Ну вот, получше... получше... (с) Один зубной врач</h1>
+                    <p data-bind="visible: lang() == 'ru'">Иннова-а-ация, девять на двенадцать (c:)</p>
 
                     <p>
-                        <span data-bind="visible: lang() == 'en'">We're based in Russian Federation &mdash; Moscow and St. Petersburg (GMT+4).</span>
-                        <span data-bind="visible: lang() == 'ru'">Мы находимся в Москве и в Санкт-Петербурге.</span>                
+                        <span data-bind="visible: lang() == 'en'">We're programmers based in Russian Federation &mdash; Moscow and St. Petersburg (GMT+4).</span>
                     </p>
 
                     <p>
-                        E-mail: <a href="mailto:contact@05bit.com">contact@05bit.com</a>
+                        <span data-bind="visible: lang() == 'en'">Please, send us a mail to get info or support for our products:</span>
+                        <span data-bind="visible: lang() == 'ru'">E-mail:</span>
+                        <a href="mailto:contact@05bit.com">contact@05bit.com</a>
                     </p>
                 </div>
             </div>
@@ -106,51 +106,67 @@
             </section>
         </div>
 
-        <!-- News -->
-        <section class="container">
+        <section class="container projects">
             <div class="row">
-                <div class="span3 offset2">
-                    <h2 data-bind="visible: lang() == 'ru'">Новости</h2>
-                    <h2 data-bind="visible: lang() == 'en'">Blog posts</h2>
+                <div class="span2">
+                    <h2 class="title-projects" data-bind="visible: lang() == 'en'"># Projects</h2>
+                    <h2 class="title-projects" data-bind="visible: lang() == 'ru'"># Проекты</h2>
                 </div>
-                <div class="span7">
-                    
+                <div class="span5">
+                    <h3>Apps for iPhone / iPad</h3>
+
                     <div class="row">
-                        <div class="span3 image">
-                            <a href="/onephoto/"><img src="/assets/img/onephoto.png" width="200px" class="img-polaroid"></a>
-                        </div>
-                        <div class="span4 text">
-                            <h2>One Photo</h2>
-                            <p data-bind="visible: lang() == 'en'"><em>19 October 2012</em><br>
-                                New app One Photo v1.0<br> released! <a href="/onephoto/">Read more &raquo;</a>
-                            </p>
-                            <p data-bind="visible: lang() == 'ru'"><em>19 октября 2012</em><br>
-                                Вышло приложение<br>One Photo! <a href="/onephoto/">Подробнее &raquo;</a>
-                            </p>
-                            <p data-bind="visible: lang() == 'en'">
-                                <a href="https://itunes.apple.com/us/app/one-photo/id540976962" target="_blank">
-                                    <img src="/assets/img/app_store_small.png">
-                                </a>
-                            </p>
-                            <p data-bind="visible: lang() == 'ru'">
-                                <a href="https://itunes.apple.com/ru/app/one-photo/id540976962" target="_blank">
-                                    <img src="/assets/img/app_store_small.png">
-                                </a>
-                            </p>
+                        <div class="span1"><img src="/assets/img/app-mouse_50x50.jpg"></div>
+                        <div class="span3">
+                            <dl>
+                                <dt><a href="http://itunes.apple.com/us/app/how-mouse-played-ball-book/id483558719" target="_blank">How the Mouse Played with the Ball</a></dt>
+                                    <dd>&mdash; interactive educational book for children from age 1 to age 2+ by Alexander Klein, app for iPad</dd>
+                            </dl>                            
                         </div>
                     </div>
+
+                    <div class="row">
+                        <div class="span1"><img src="/assets/img/app-onephoto_50x50.png"></div>
+                        <div class="span3">
+                            <dl>
+                                <dt><a href="http://itunes.apple.com/us/app/how-mouse-played-ball-book/id483558719" target="_blank">One Photo</a></dt>
+                                    <dd>&mdash; wallet with the only photo, app for iPhone</dd>
+                            </dl>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="span5">
+                    <h3 class="inner">Open source</h3>
+                    <dl>
+                        <dt><a href="https://github.com/05bit/django-smarter" target="_blank">django-smarter</a></dt>
+                            <dd>&mdash; another approach for generic views in Django</dd>
+                        <dt><a href="https://github.com/05bit/rango" target="_blank">Rango</a></dt>
+                            <dd>&mdash; some spice for Django</dd>
+                    </dl>
+
+                    <h3>Web projects</h3>
+
+                    <dl>
+                        <dt><a href="http://www.gallerza.com" target="_blank">Gallerza</a></dt>
+                            <dd>&mdash; simple photo gallery publishing</dd>
+                        <dt><a href="http://www.ikucha.ru" target="_blank">iKucha</a></dt>
+                            <dd>&mdash; minimalistic web service for keeping notes</dd>
+                        <dt><a href="http://www.qmazi.com" target="_blank">Qmazi</a></dt>
+                            <dd>&mdash; blogging platform powered by Django</dd>
+
+                    </dl>
                 </div>
             </div>
         </section>
 
         <!-- Dreamteam -->
         <section class="container">
-            <h2 class="team" data-bind="visible: lang() == 'en'"># Meet our team</h2>
-            <h2 class="team" data-bind="visible: lang() == 'ru'"># Наша команда</h2>
+            <h2 class="title-team" data-bind="visible: lang() == 'en'"># Meet our team</h2>
+            <h2 class="title-team" data-bind="visible: lang() == 'ru'"># Наша команда</h2>
         </section>
         <section class="team clearfix">
             <div class="members-list">
-                <a class="member" href="/rudyryk/">
+                <a class="member" href="http://rudyryk.qmazi.com" target="_blank">
                     <div class="image" style="background-image: url(/assets/img/rudyryk.jpg)"></div>
                     Alexey Kinyov<!--<br>// @rudyryk-->
                 </a>
@@ -160,129 +176,10 @@
                     Vasily Sadovnikov
                 </a>
 
-                <a class="member" href="http://www.facebook.com/funkypublic">
+                <a class="member" href="http://uvavu.ru">
                     <div class="image" style="background-image: url(/assets/img/pasha.png)"></div>
                     Pavel Shevelyov
                 </a>
-            </div>
-        </section>
-
-        <!-- Technologies -->
-        <section class="container techs">
-            <div class="row">
-                <div class="span3 offset2">
-                    <h2 data-bind="visible: lang() == 'en'">Technologies<br>we use</h2>
-                    <h2 data-bind="visible: lang() == 'ru'">Используемые<br>технологии</h2>
-                </div>
-
-                <div class="span7">
-                    <a href="http://python.org" target="_blank"><img src="/assets/img/logo-python.png"></a>
-
-                    <a href="http://djangoproject.com" target="_blank"><img src="/assets/img/logo-django.png"></a>
-
-                    <a href="http://www.html5rocks.com" target="_blank"><img src="/assets/img/logo-html5.png"></a>
-
-                    <a href="http://jquery.org" target="_blank"><img src="/assets/img/logo-jquery.png"></a>
-
-                    <a href="http://redis.io" target="_blank"><img src="/assets/img/logo-redis.png"></a>
-
-                    <a href="http://www.postgresql.org" target="_blank"><img src="/assets/img/logo-postgresql.png"></a>
-
-                    <a href="http://knockoutjs.com" target="_blank"><img src="/assets/img/logo-knockoutjs.png"></a>
-
-                    <a href="http://sendgrid.com" target="_blank"><img src="/assets/img/logo-sendgrid.jpg"></a>
-
-                    <a href="http://aws.amazon.com" target="_blank"><img src="/assets/img/logo-aws.png"></a>
-
-                    <a href="http://aws.amazon.com" target="_blank"><img src="/assets/img/logo-ubuntu.png"></a>
-
-                    <p data-bind="visible: lang() == 'en'">Having such perfect technologies and experienced team
-                    <br>we can create complex projects really fast.</p>
-
-                    <p data-bind="visible: lang() == 'ru'">Имея в распоряжении такие прекрасные технологии, мы можем<br>
-                        создавать продукты быстро, качественно и с удовольствием.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects -->
-        <section class="container">
-            <a name="projects"></a>
-            <div class="row">
-                <div class="span10 offset2">
-                    <h2 data-bind="visible: lang() == 'en'">Featured Projects</h2>
-                    <h2 data-bind="visible: lang() == 'ru'">Проекты</h2>
-
-                    <table class="projects">
-                        <!--tr data-bind="visible: lang() == 'ru'">
-                            <td><a href="http://www.darimvmeste.ru" target="_blank">Дарим Вместе</a></td>
-                            <td>&nbsp;</td>
-                        </tr-->
-                        <tr>
-                            <td><a href="http://www.gallerza.com" target="_blank">Gallerza</a></td>
-                            <td><a href="http://www.qmazi.com" target="_blank">Qmazi</a></td>
-                        </tr>
-                        <tr data-bind="visible: lang() == 'en'">
-                            <td><a href="http://www.ikucha.ru" target="_blank">iKucha</a></td>
-                            <td><a href="http://itunes.apple.com/us/app/how-mouse-played-ball-book/id483558719" target="_blank">How the Mouse Played <br> with the Ball</a></td>
-                        </tr>
-                        <tr data-bind="visible: lang() == 'ru'">
-                            <td><a href="http://www.ikucha.ru" target="_blank">iКуча</a></td>
-                            <td><a href="http://itunes.apple.com/ru/app/how-mouse-played-ball-book/id483558719" target="_blank">Как мышка <br> играла в мячик</a></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- Resources -->
-        <section class="container">
-            <div class="row">
-                <div class="span10 offset2">
-                    <table class="projects">
-                        <tr>
-                            <td>
-                                <h3 data-bind="visible: lang() == 'ru'">Наши ресурсы</h3>
-                                <h3 data-bind="visible: lang() == 'en'">Open source</h3>
-                            </td>
-                            <td>
-                                <h3 data-bind="visible: lang() == 'ru'">Блоги</h3>
-                                <h3 data-bind="visible: lang() == 'en'">Blogs</h3>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://github.com/organizations/05bit" target="_blank">05Bit @ GutHub</a>
-                            </td>
-
-                            <td><a href="http://05bit.qmazi.com" target="_blank">05Bit @ Qmazi</a> </td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://bitbucket.org/05bit" target="_blank">05Bit @ Bitbucket</a>
-                            </td>
-                            <td>
-                                <a href="http://uvavu.ru/" target="_blank">Uvavu.ru</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>
-                                <a href="http://kiss-of-life.posterous.com/" target="_blank">Kiss Of Life</a>
-                            </td>
-                        </tr>
-
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- Finally -->
-        <section class="container">
-            <div class="row">
-                <div class="span10 offset2">
-                    <h2 data-bind="visible: lang() == 'en'">Have a question?</h2>
-                    <h2 data-bind="visible: lang() == 'ru'">Есть вопросы?</h2>
-                    <p>E-mail us <a href="mailto:contact@05bit.com">contact@05bit.com</a></p>
-                </div>
             </div>
         </section>
     </div>

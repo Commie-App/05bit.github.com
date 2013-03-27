@@ -25,6 +25,13 @@
     margin-top: 45px;
 }
 
+h2.title-team, h2.title-projects {
+    /*margin-top: 60px;*/
+    margin-bottom: 0px;
+    /*text-align: center;*/
+    font-size: 1.0em;    
+}
+
 /** Promo
 */
 #home .promo {
@@ -33,12 +40,6 @@
 
 /** Team
 */
-#home h2.team {
-    /*margin-top: 60px;*/
-    margin-bottom: 0px;
-    /*text-align: center;*/
-    font-size: 1.0em;
-}
 #home #content section.team {
     margin-left: 0;
     margin-top: 0;
@@ -60,7 +61,8 @@
         text-align: center;
         text-decoration: none;
         font-size: 2em;
-        color: #000;
+        color: #555;
+        text-shadow: 0px 1px #fff;
     }
         #home section.team a.member .image {
             width: 200px;
@@ -91,6 +93,11 @@
 
 /** Projects
 */
+#home .projects h3,
+#home .projects dl  {
+    margin-top: 0;
+}
+
 #home table.projects {
     width: 100%;
 }
