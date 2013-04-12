@@ -4,23 +4,18 @@
 
 <div id="content">
     <section class="container container_12 clearfix">
-        <iframe id="ippro" src="about:blank" width="100%" style="border: none;"></iframe>
+        <iframe id="ippro_iframe" src="about:blank" width="100%" style="border: none;" onload="window.parent.parent.scrollTo(0,0)"></iframe>
     </section>
 </div>
   
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-
 <script type="text/javascript">
-    $(function() {
-        $('#ippro').prop('src', 'https://online.ippro.ru?partner=3');
-    });
-
     window.addEventListener('message', function(event) {
         if (event.origin.search("://online.ippro.ru") != -1) {
             if (isNaN(event.data)) return;
             document.getElementById('ippro').height = (parseInt(event.data) + 5) + "px";
         }
     }, false);
+    document.getElementById('ippro_iframe').src = 'https://online.ippro.ru?partner=3';
 </script>
 
 {% endblock %}
