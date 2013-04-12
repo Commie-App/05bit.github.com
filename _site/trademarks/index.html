@@ -1,30 +1,21 @@
 {% extends "post.html" %}
 
 {% block content %}
-
 <div id="content">
     <section class="container container_12 clearfix">
-        <iframe id="ippro" src="about:blank" width="100%" style="border: none;"></iframe>
+        <iframe id="ippro" src="https://online.ippro.ru?partner=3" width="100%" style="border: none;"></iframe>
     </section>
 </div>
   
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
 <script type="text/javascript">
-    $(function() {
-        ippro_autosize();
-        $('#ippro').prop('src', 'http://62.76.43.101?partner=3');
-    });
-
-    function ippro_autosize(id, other_domain) {
+    function ippro_autosize(id, domain) {
         var iframe = document.getElementById('ippro');
         window.addEventListener('message', function(event) {
-            // if (event.origin !== other_domain) return; // only accept messages from the specified domain
-            if (isNaN(event.data)) return; // only accept something which can be parsed as a number
-            var height = parseInt(event.data) + 32; // add some extra height to avoid scrollbar
-            iframe.height = height + "px";
+            if (isNaN(event.data)) return;
+            iframe.height = (parseInt(event.data) + 5) + "px";
         }, false);
     }
 </script>
-
 {% endblock %}
