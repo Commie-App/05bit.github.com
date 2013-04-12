@@ -16,9 +16,10 @@
     });
 
     window.addEventListener('message', function(event) {
-        console.log(event);
-        if (isNaN(event.data)) return;
-        document.getElementById('ippro').height = (parseInt(event.data) + 5) + "px";
+        if (event.origin.search("://online.ippro.ru") != -1) {
+            if (isNaN(event.data)) return;
+            document.getElementById('ippro').height = (parseInt(event.data) + 5) + "px";
+        }
     }, false);
 </script>
 
