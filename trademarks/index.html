@@ -41,23 +41,27 @@
 
 
     
+
 <div id="content">
     <section class="container container_12 clearfix">
-        <iframe id="ippro" src="https://online.ippro.ru?partner=3" width="100%" style="border: none;" onload="window.parent.parent.scrollTo(0,0)"></iframe>
+        <iframe id="ippro" src="about:blank" width="100%" style="border: none;"></iframe>
     </section>
 </div>
   
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
 <script type="text/javascript">
-    function ippro_autosize(id, domain) {
-        var iframe = document.getElementById('ippro');
-        window.addEventListener('message', function(event) {
-            if (isNaN(event.data)) return;
-            iframe.height = (parseInt(event.data) + 5) + "px";
-        }, false);
-    }
+    $(function() {
+        $('#ippro').prop('src', 'https://online.ippro.ru?partner=3');
+    });
+
+    window.addEventListener('message', function(event) {
+        console.log(event);
+        if (isNaN(event.data)) return;
+        document.getElementById('ippro').height = (parseInt(event.data) + 5) + "px";
+    }, false);
 </script>
+
 
 
     
