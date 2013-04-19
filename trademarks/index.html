@@ -52,7 +52,7 @@
     window.addEventListener('message', function(event) {
         if (event.origin.search("://online.ippro.ru") != -1) {
             if (isNaN(event.data)) return;
-            document.getElementById('ippro_iframe').height = (parseInt(event.data) + 5) + "px";
+            document.getElementById('ippro_iframe').height = (parseInt(event.data) + 15) + "px";
         }
     }, false);
     document.getElementById('ippro_iframe').src = 'https://online.ippro.ru?partner=3';
