@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block head_extras %}
+    <link href="{{ asset('css/home.css') }}" rel='stylesheet' type='text/css' />
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block main %}
+<div class="row">
+    <div class="col-lg-8 col-md-offset-2">
+        <div class="home">
+            <div class="home-logo">
+                <img src="{{ asset('img/logo-big.png') }}">
+            </div>
+            {{ chapter.content_html }}
+        </div>            
+    </div>
+</div>
+{% endblock %}

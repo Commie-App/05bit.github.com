@@ -1,0 +1,76 @@
+/** Typography tweaks */
+body { font-size: 16px; }
+h1 { margin-bottom: 15px; margin-top: 40px; }
+    h1:first-child { margin-top: 20px; }
+h2 { margin-bottom: 15px; margin-top: 40px; }
+    h2:first-child { margin-top: 20px; }
+
+/** Bootstrap + Pygments glue */
+.source {
+    border-radius: 4px;
+}
+.source pre {
+    color: inherit;
+    background-color: inherit;
+    border: none;
+}
+
+/** Content images */
+.main-content p img {
+    padding: 4px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+/** Navbar brand logo */
+.navbar-brand {
+    background-repeat: no-repeat;
+    background-position: 15px center;
+}
+    .navbar-brand.logo {
+        padding-left: 0px;
+    }
+
+/** Navbar top links */
+.navbar-default .navbar-nav>li.active>a,
+.navbar-default .navbar-nav>li.active>a:hover {
+    background-color: #ffffff;
+    border-top: 3px solid #428bca;
+    padding-top: 12px;    
+}
+.navbar-default .navbar-nav>li>a:hover {
+    color: #2a6496;
+    border-top: 3px solid #428bca;
+    padding-top: 12px;    
+}
+
+/** Top navigation*/
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #000;
+}
+
+/** Sidebar */
+.nav-tree.nav>li>a.index {
+    font-weight: bold;
+}
+.nav-tree.nav li {
+    list-style: none;
+}
+    .nav-tree.nav li>a {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .nav-tree.nav li>hr {
+        margin: 5px 0px;
+    }
+    .nav-tree.nav li li {
+        margin-left: 15px;
+    }
+
+/** Footer */
+.footer .text-muted a {
+    color: inherit;
+    text-decoration: underline;
+}

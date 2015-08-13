@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block head_extras %}
+    <link href="{{ asset('css/brillixy.css') }}" rel='stylesheet' type='text/css' />
+
+    <!-- Slideshow -->
+    <link href="{{ asset('css/slick.css') }}" rel='stylesheet' type='text/css' />
+    <link href="{{ asset('css/slick-theme.css') }}" rel='stylesheet' type='text/css' />
+    <script src="{{ asset('js/slick.min.js') }}"></script>
+    <script type="text/javascript">
+    $(function(){
+        $("#slides").slick({
+            dots: true,
+            fade: true,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 3000
+        });
+    });
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div id="slides">
+        <div><img src="{{ asset('img/brillixy_1.png') }}"></div>
+        <div><img src="{{ asset('img/brillixy_2.png') }}"></div>
+        <div><img src="{{ asset('img/brillixy_3.png') }}"></div>
+    </div>
+
+    {{ chapter.content_html }}
+{% endblock %}

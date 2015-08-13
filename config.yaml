@@ -1,0 +1,35 @@
+# Project info
+title:      05Bit
+logo:       img/logo.png
+copyright:  '&copy; 2012 &mdash; 2015 <a href="http://05bit.com">05Bit.com</a>'
+
+# Data structure
+chapters:
+  # Main chapters
+  - index:            index.md
+    input_path:       ./_sources
+
+# Rendering
+output:
+  html:
+    build_path: ./
+    theme:
+      icons: awesome
+      #icons: glyphicon
+    main_menu:
+      # - title:  Quickstart
+      #   url:    quickstart/
+      # - title:  Install
+      #   url:    install/
+      #   icon:   download
+      #- title:  Development
+      #  url:    https://github.com/05bit/python-docta
+resources:  ./_resources
+templates:  ./_templates
+
+# Serving html
+server:
+  host:       127.0.0.1
+  port:       8000
+  base_url:   /
+  assets_url: assets/
