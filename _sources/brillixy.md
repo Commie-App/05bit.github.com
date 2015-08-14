@@ -18,8 +18,7 @@ template: brillixy.html
  * Header logo & title can be changed easily
  * Customizable dashboard panels 
 
-
-## <a name="pricing"></a>Pricing
+## <a name="pricing"> </a>Pricing
 
  * FREE for NON-commercial
  <small>Brillixy is licensed under a Creative Commons
@@ -62,7 +61,7 @@ Installation process is generic and straightforward. Please, follow installation
 
 ## Contacts & support
 
-Drop me a line to <rudy@05bit.com> if you have any questions or wish to give a feedback! Thank you.
+Just drop me a line to <rudy@05bit.com> if you have any questions or wish to give a feedback! Or create an issue at [GitHub](https://github.com/05bit/brillixy/issues).
 
 ## Authors
 
@@ -74,7 +73,7 @@ Drop me a line to <rudy@05bit.com> if you have any questions or wish to give a f
         <td>
             <p>
                 <strong>Alexey Kinev</strong><br>
-                <a href="http://05bit.com/rudyryk/">http://05bit.com/rudyryk/</a>
+                <a href="http://github.com/rudyryk/">http://github.com/rudyryk/</a>
             </p>
             <p>
                 <blockquote>

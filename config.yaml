@@ -1,7 +1,9 @@
 # Project info
 title:      05Bit
 logo:       img/logo.png
-copyright:  '&copy; 2012 &mdash; 2015 <a href="http://05bit.com">05Bit.com</a>'
+copyright:  >
+            &copy; 2012 &mdash; 2015 <a href="http://05bit.com">05Bit.com</a> |
+            <a href="mailto:team@05bit.com">team@05bit.com</a>
 
 # Data structure
 chapters:
