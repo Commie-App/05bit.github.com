@@ -70,6 +70,9 @@ h2 { margin-bottom: 15px; margin-top: 40px; }
     }
 
 /** Footer */
+.footer {
+    text-align: center;
+}
 .footer .text-muted a {
     color: inherit;
     text-decoration: underline;

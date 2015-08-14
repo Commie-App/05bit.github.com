@@ -3,6 +3,6 @@ title: 05Bit
 sorting: A
 ---
 
-* [Hypple](http://hypple.co)
+* <a href="http://hypple.co" target="_blank">Hypple</a>
 * [Brillixy](/brillixy/)
-* [Docta](http://docta.05bit.com)
+* <a href="http://docta.05bit.com" target="_blank">Docta</a>
