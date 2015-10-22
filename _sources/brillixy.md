@@ -1,6 +1,6 @@
 ---
 title: Brillixy
-sorting: A
+sorting: C
 template: brillixy.html
 ---
 

@@ -66,6 +66,10 @@ h2 { margin-bottom: 15px; margin-top: 40px; }
 
 /** Top navigation*/
 
+.navbar-default {
+    background-color: #fff;
+}
+
 .navbar-default .navbar-brand,
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
