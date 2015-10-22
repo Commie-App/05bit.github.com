@@ -47,6 +47,9 @@ Web service by “IP Pro” law firm which helps everyone to fill forms for trad
 
 <a href="https://online.ippro.ru" target="_blank">online.ippro.ru</a>
 
+<img src="/assets/img/ippro_1.jpg" alt="Screenshot 1" class="img-thumbnail">
+
+
 ## Eily ERP
 
 In-house ERP for advertising agency which creates branded souvenirs. Implemetns the whole set of features for company financial management — projects tracking, revenue calculation, managers rewards calculation, tracking expenses, complex analytics, integration with CRM etc.
