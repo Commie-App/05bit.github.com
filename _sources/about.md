@@ -43,6 +43,7 @@ If you're interested about what technologies do we use, here's the list:
         <td>
             <p>
                 <strong>Alexey Kinev</strong> &lt;<a href="mailto:rudy@05bit.com">rudy@05bit.com</a>&gt;, CEO & programmer<br>
+                More contacts: <a href="https://about.me/rudyryk" target="_blank">about.me/rudyryk</a>
             </p>
             <p>
                 <blockquote>
