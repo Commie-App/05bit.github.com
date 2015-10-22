@@ -3,6 +3,4 @@ title: 05Bit
 sorting: A
 ---
 
-* <a href="http://hypple.co" target="_blank">Hypple</a>
-* [Brillixy](/brillixy/)
-* <a href="http://docta.05bit.com" target="_blank">Docta</a>
+Hi! We are **05Bit**, a small team of experienced web developers. Contact us: <a href="mailto:team@05bit.com">team@05bit.com</a>

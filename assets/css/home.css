@@ -25,6 +25,12 @@
     border-radius: 3px;
 }
 
+/** Sections */
+
+.home .section p, .home .section a {
+    font-size: 1.25em;
+}
+
 /** Logo */
 
 .home-logo {
