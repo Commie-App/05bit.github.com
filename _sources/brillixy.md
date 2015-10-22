@@ -4,6 +4,9 @@ sorting: C
 template: brillixy.html
 ---
 
+<a href="http://brillixy.05bit.com" target="_blank" class="btn btn-success">Show live demo &rarr;</a>
+&nbsp;&nbsp;&nbsp; Use login / password: demo / demo
+
 # Brillixy
 
 — nifty Django admin interface

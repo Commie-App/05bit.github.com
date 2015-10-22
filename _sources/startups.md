@@ -5,7 +5,7 @@ sorting: B
 
 # Our Startups
 
-We build experimental projects to find something new and big.
+We build experimental projects to find something new and big. Here are some of our experiments.
 
 # Hypple
 
