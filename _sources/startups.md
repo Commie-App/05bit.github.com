@@ -31,11 +31,3 @@ Interactive educational book for children age 2+
 Super-simple open source static site builer. This site is powered by it.
 
 <a href="http://docta.05bit.com" target="_blank">docta.05bit.com</a>
-
-<!--
-# Gallerza
-
-Web service for publishing image galleries.
-
-<a href="http://www.gallerza.com" target="_blank">www.gallerza.com</a>
--->
